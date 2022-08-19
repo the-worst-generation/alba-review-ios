@@ -1,0 +1,4 @@
+disabled_rules:
+  unused_optional_binding
+
+line_length: 200
