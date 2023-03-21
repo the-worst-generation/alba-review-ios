@@ -194,6 +194,10 @@ class LoginAgeSexViewController: UIViewController {
             }).disposed(by: disposeBag)
         
         //시작 버튼 터치 이벤트
+        nextButton.rx.tap
+            .bind(onNext: {
+                self.navigationController?.pushViewController(AlabaExperiecnceCheckViewController(), animated: true)
+            }).disposed(by: disposeBag)
     }
 
     
