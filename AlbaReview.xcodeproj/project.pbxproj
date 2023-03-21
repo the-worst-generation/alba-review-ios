@@ -19,6 +19,7 @@
 		CAE42AC629C9A0570057599A /* YearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC529C9A0560057599A /* YearModel.swift */; };
 		CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC729C9A2ED0057599A /* StartViewModel.swift */; };
 		CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC929C9B31C0057599A /* AlabaExperienceCheckVC.swift */; };
+		CAE42AD029C9C4670057599A /* AlabaExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */; };
 		CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */; };
 		CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */; };
 		CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E429C4AE150059EA85 /* LoginVC.swift */; };
@@ -67,6 +68,7 @@
 		CAE42AC529C9A0560057599A /* YearModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearModel.swift; sourceTree = "<group>"; };
 		CAE42AC729C9A2ED0057599A /* StartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		CAE42AC929C9B31C0057599A /* AlabaExperienceCheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlabaExperienceCheckVC.swift; sourceTree = "<group>"; };
+		CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlabaExperienceVC.swift; sourceTree = "<group>"; };
 		CAF3E0DD29C4AE150059EA85 /* AlbaReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbaReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */,
 				CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */,
 				CAE42AC929C9B31C0057599A /* AlabaExperienceCheckVC.swift */,
+				CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */,
 				CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */,
 			);
 			path = ViewController;
@@ -609,6 +612,7 @@
 				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
 				CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */,
 				CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */,
+				CAE42AD029C9C4670057599A /* AlabaExperienceVC.swift in Sources */,
 				CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */,
 				CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,

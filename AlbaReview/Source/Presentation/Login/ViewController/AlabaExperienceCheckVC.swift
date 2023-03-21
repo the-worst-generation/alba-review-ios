@@ -92,9 +92,9 @@ class AlabaExperiecnceCheckViewController: UIViewController{
     }
     
     private func bind() {
-        nextButton.rx.tap
+        yesButton.rx.tap
             .bind(onNext: {
-                self.navigationController?.pushViewController(LoginAgeSexViewController(), animated: true)
+                self.navigationController?.pushViewController(AlbaExperienceViewController(), animated: true)
             }).disposed(by: disposeBag)
     }
     
