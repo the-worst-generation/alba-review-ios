@@ -10,9 +10,13 @@
 		0E6E303E293CA1039ED32F99 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E660A739DC57933DE74BF2 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
 		190BF9EBE2DD66F7C055D396 /* Pods_AlbaReviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF099FD5BB197D143DA8626 /* Pods_AlbaReviewTests.framework */; };
 		881EB3C27E0F7000EB54D94A /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7368AD5BE585E9327F05D409 /* Pods_AlbaReview.framework */; };
+		CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */; };
+		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
+		CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56529C9800700B5798E /* UITextField++.swift */; };
+		CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56729C98A1600B5798E /* UIViewController++.swift */; };
 		CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */; };
 		CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */; };
-		CAF3E0E529C4AE150059EA85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E429C4AE150059EA85 /* ViewController.swift */; };
+		CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E429C4AE150059EA85 /* LoginVC.swift */; };
 		CAF3E0EA29C4AE170059EA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E0E929C4AE170059EA85 /* Assets.xcassets */; };
 		CAF3E0ED29C4AE170059EA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF3E0EB29C4AE170059EA85 /* LaunchScreen.storyboard */; };
 		CAF3E0F829C4AE170059EA85 /* AlbaReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0F729C4AE170059EA85 /* AlbaReviewTests.swift */; };
@@ -47,13 +51,17 @@
 		87E660A739DC57933DE74BF2 /* Pods_AlbaReview_AlbaReviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReview_AlbaReviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0467573049DFBF53F4FA5E /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BDA34D8143840CA560FD0B9 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA769E4929C4E17E008387F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNickNameVC.swift; sourceTree = "<group>"; };
+		CAB1C56329C97CAD00B5798E /* UILabel++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++.swift"; sourceTree = "<group>"; };
+		CAB1C56529C9800700B5798E /* UITextField++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField++.swift"; sourceTree = "<group>"; };
+		CAB1C56729C98A1600B5798E /* UIViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController++.swift"; sourceTree = "<group>"; };
 		CAF3E0DD29C4AE150059EA85 /* AlbaReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbaReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAF3E0E429C4AE150059EA85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAF3E0E429C4AE150059EA85 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CAF3E0E929C4AE170059EA85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAF3E0EC29C4AE170059EA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CAF3E0EE29C4AE170059EA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF3E0F329C4AE170059EA85 /* AlbaReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbaReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E0F729C4AE170059EA85 /* AlbaReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbaReviewTests.swift; sourceTree = "<group>"; };
 		CAF3E0FD29C4AE170059EA85 /* AlbaReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbaReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +113,7 @@
 		CA702BAC29C4BE0D00533B3A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				CAF3E0EE29C4AE170059EA85 /* Info.plist */,
+				CA769E4929C4E17E008387F4 /* Info.plist */,
 				CAF3E0E929C4AE170059EA85 /* Assets.xcassets */,
 				CAF3E0EB29C4AE170059EA85 /* LaunchScreen.storyboard */,
 			);
@@ -117,7 +125,6 @@
 			children = (
 				CA702BAF29C4BE7600533B3A /* Presentation */,
 				CA702BAE29C4BE6100533B3A /* Extenstion */,
-				CAF3E0E429C4AE150059EA85 /* ViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -125,6 +132,9 @@
 		CA702BAE29C4BE6100533B3A /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
+				CAB1C56329C97CAD00B5798E /* UILabel++.swift */,
+				CAB1C56529C9800700B5798E /* UITextField++.swift */,
+				CAB1C56729C98A1600B5798E /* UIViewController++.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 		CA702BB529C4BF0300533B3A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CAF3E0E429C4AE150059EA85 /* LoginVC.swift */,
+				CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -570,7 +582,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF3E0E529C4AE150059EA85 /* ViewController.swift in Sources */,
+				CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */,
+				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
+				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
+				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
+				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
 				CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
 			);
@@ -745,13 +761,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WBG9V97XP4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbaReview/Info.plist;
+				INFOPLIST_FILE = AlbaReview/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,13 +798,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WBG9V97XP4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlbaReview/Info.plist;
+				INFOPLIST_FILE = AlbaReview/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
