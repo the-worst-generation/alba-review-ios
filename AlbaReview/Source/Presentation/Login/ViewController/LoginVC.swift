@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         setUpUI()
         setAddView()
         setUpConstraints()

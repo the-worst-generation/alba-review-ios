@@ -63,7 +63,7 @@ class LoginNickNameViewController: UIViewController {
         setUpUI()
         setAddView()
         setConstraints()
-        
+
     }
     
     //MARK: - SetUp
