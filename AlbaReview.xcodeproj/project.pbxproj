@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E6E303E293CA1039ED32F99 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E660A739DC57933DE74BF2 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
-		190BF9EBE2DD66F7C055D396 /* Pods_AlbaReviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF099FD5BB197D143DA8626 /* Pods_AlbaReviewTests.framework */; };
-		881EB3C27E0F7000EB54D94A /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7368AD5BE585E9327F05D409 /* Pods_AlbaReview.framework */; };
+		26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E857360128C3A559132E245 /* Pods_AlbaReview.framework */; };
+		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
 		CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */; };
 		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
 		CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56529C9800700B5798E /* UITextField++.swift */; };
@@ -27,6 +26,7 @@
 		CAF3E0F829C4AE170059EA85 /* AlbaReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0F729C4AE170059EA85 /* AlbaReviewTests.swift */; };
 		CAF3E10229C4AE170059EA85 /* AlbaReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E10129C4AE170059EA85 /* AlbaReviewUITests.swift */; };
 		CAF3E10429C4AE170059EA85 /* AlbaReviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E10329C4AE170059EA85 /* AlbaReviewUITestsLaunchTests.swift */; };
+		F7D24363EDD49A879540B518 /* Pods_AlbaReviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A94B4C240CA240EAE45B381 /* Pods_AlbaReviewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,15 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0367FAE0028F210C4F37FF1C /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1E1361AD276DC19AFDBA8C17 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2E406DE38BC7A0874708FED4 /* Pods-AlbaReview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReview/Pods-AlbaReview.debug.xcconfig"; sourceTree = "<group>"; };
-		3BF099FD5BB197D143DA8626 /* Pods_AlbaReviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE9E4E7AC4BAED4CCB66E86 /* Pods-AlbaReview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview/Pods-AlbaReview.release.xcconfig"; sourceTree = "<group>"; };
-		7368AD5BE585E9327F05D409 /* Pods_AlbaReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87E660A739DC57933DE74BF2 /* Pods_AlbaReview_AlbaReviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReview_AlbaReviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A0467573049DFBF53F4FA5E /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
-		9BDA34D8143840CA560FD0B9 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		154858DCE0E3D86704F85DA3 /* Pods-AlbaReview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReview/Pods-AlbaReview.debug.xcconfig"; sourceTree = "<group>"; };
+		24D03D9CD0ACC6D137EDB38C /* Pods-AlbaReview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview/Pods-AlbaReview.release.xcconfig"; sourceTree = "<group>"; };
+		2E857360128C3A559132E245 /* Pods_AlbaReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41123321EBA63F4DFF0C7AC4 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A94B4C240CA240EAE45B381 /* Pods_AlbaReviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA769E4929C4E17E008387F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNickNameVC.swift; sourceTree = "<group>"; };
 		CAB1C56329C97CAD00B5798E /* UILabel++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++.swift"; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		CAF3E0FD29C4AE170059EA85 /* AlbaReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbaReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E10129C4AE170059EA85 /* AlbaReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbaReviewUITests.swift; sourceTree = "<group>"; };
 		CAF3E10329C4AE170059EA85 /* AlbaReviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbaReviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlbaReview_AlbaReviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881EB3C27E0F7000EB54D94A /* Pods_AlbaReview.framework in Frameworks */,
+				26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190BF9EBE2DD66F7C055D396 /* Pods_AlbaReviewTests.framework in Frameworks */,
+				F7D24363EDD49A879540B518 /* Pods_AlbaReviewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,22 +100,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6E303E293CA1039ED32F99 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */,
+				C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A772AC0E1E55395B4C85C0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E857360128C3A559132E245 /* Pods_AlbaReview.framework */,
+				E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */,
+				5A94B4C240CA240EAE45B381 /* Pods_AlbaReviewTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30612BD3AE0C1E8B320A44EA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2E406DE38BC7A0874708FED4 /* Pods-AlbaReview.debug.xcconfig */,
-				3DE9E4E7AC4BAED4CCB66E86 /* Pods-AlbaReview.release.xcconfig */,
-				9BDA34D8143840CA560FD0B9 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */,
-				0367FAE0028F210C4F37FF1C /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */,
-				1E1361AD276DC19AFDBA8C17 /* Pods-AlbaReviewTests.debug.xcconfig */,
-				8A0467573049DFBF53F4FA5E /* Pods-AlbaReviewTests.release.xcconfig */,
+				154858DCE0E3D86704F85DA3 /* Pods-AlbaReview.debug.xcconfig */,
+				24D03D9CD0ACC6D137EDB38C /* Pods-AlbaReview.release.xcconfig */,
+				41123321EBA63F4DFF0C7AC4 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */,
+				C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */,
+				C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */,
+				698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -307,7 +317,7 @@
 				CAF3E10029C4AE170059EA85 /* AlbaReviewUITests */,
 				CAF3E0DE29C4AE150059EA85 /* Products */,
 				30612BD3AE0C1E8B320A44EA /* Pods */,
-				EF37C8C08C7610AC10729962 /* Frameworks */,
+				2A772AC0E1E55395B4C85C0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -349,16 +359,6 @@
 			path = AlbaReviewUITests;
 			sourceTree = "<group>";
 		};
-		EF37C8C08C7610AC10729962 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7368AD5BE585E9327F05D409 /* Pods_AlbaReview.framework */,
-				87E660A739DC57933DE74BF2 /* Pods_AlbaReview_AlbaReviewUITests.framework */,
-				3BF099FD5BB197D143DA8626 /* Pods_AlbaReviewTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,11 +366,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAF3E10729C4AE170059EA85 /* Build configuration list for PBXNativeTarget "AlbaReview" */;
 			buildPhases = (
-				67C8B71F94E9D0EAB2D6D40D /* [CP] Check Pods Manifest.lock */,
+				D742E7EB80DCB31C6AD488FA /* [CP] Check Pods Manifest.lock */,
 				CAF3E0D929C4AE150059EA85 /* Sources */,
 				CAF3E0DA29C4AE150059EA85 /* Frameworks */,
 				CAF3E0DB29C4AE150059EA85 /* Resources */,
-				A0738692B38FD7972BAE0329 /* [CP] Embed Pods Frameworks */,
+				9E9793CC4B714F8CA138D331 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,7 +385,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAF3E10A29C4AE170059EA85 /* Build configuration list for PBXNativeTarget "AlbaReviewTests" */;
 			buildPhases = (
-				925D34EAE41E4498A9AC07C4 /* [CP] Check Pods Manifest.lock */,
+				14FB5B13DB3C9D0E378EDC08 /* [CP] Check Pods Manifest.lock */,
 				CAF3E0EF29C4AE170059EA85 /* Sources */,
 				CAF3E0F029C4AE170059EA85 /* Frameworks */,
 				CAF3E0F129C4AE170059EA85 /* Resources */,
@@ -404,11 +404,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAF3E10D29C4AE170059EA85 /* Build configuration list for PBXNativeTarget "AlbaReviewUITests" */;
 			buildPhases = (
-				DF1BF62619138832004C3047 /* [CP] Check Pods Manifest.lock */,
+				90E8F32245A7E82EBFB6D0F0 /* [CP] Check Pods Manifest.lock */,
 				CAF3E0F929C4AE170059EA85 /* Sources */,
 				CAF3E0FA29C4AE170059EA85 /* Frameworks */,
 				CAF3E0FB29C4AE170059EA85 /* Resources */,
-				7F58901947AE0158ABC915CA /* [CP] Embed Pods Frameworks */,
+				FDC8D8AC99A067B532733D4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -490,46 +490,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67C8B71F94E9D0EAB2D6D40D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlbaReview-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F58901947AE0158ABC915CA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		925D34EAE41E4498A9AC07C4 /* [CP] Check Pods Manifest.lock */ = {
+		14FB5B13DB3C9D0E378EDC08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -551,24 +512,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0738692B38FD7972BAE0329 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF1BF62619138832004C3047 /* [CP] Check Pods Manifest.lock */ = {
+		90E8F32245A7E82EBFB6D0F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -588,6 +532,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E9793CC4B714F8CA138D331 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D742E7EB80DCB31C6AD488FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlbaReview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDC8D8AC99A067B532733D4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -772,7 +772,7 @@
 		};
 		CAF3E10829C4AE170059EA85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E406DE38BC7A0874708FED4 /* Pods-AlbaReview.debug.xcconfig */;
+			baseConfigurationReference = 154858DCE0E3D86704F85DA3 /* Pods-AlbaReview.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -809,7 +809,7 @@
 		};
 		CAF3E10929C4AE170059EA85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DE9E4E7AC4BAED4CCB66E86 /* Pods-AlbaReview.release.xcconfig */;
+			baseConfigurationReference = 24D03D9CD0ACC6D137EDB38C /* Pods-AlbaReview.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -846,7 +846,7 @@
 		};
 		CAF3E10B29C4AE170059EA85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E1361AD276DC19AFDBA8C17 /* Pods-AlbaReviewTests.debug.xcconfig */;
+			baseConfigurationReference = C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -867,7 +867,7 @@
 		};
 		CAF3E10C29C4AE170059EA85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A0467573049DFBF53F4FA5E /* Pods-AlbaReviewTests.release.xcconfig */;
+			baseConfigurationReference = 698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -888,7 +888,7 @@
 		};
 		CAF3E10E29C4AE170059EA85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BDA34D8143840CA560FD0B9 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */;
+			baseConfigurationReference = 41123321EBA63F4DFF0C7AC4 /* Pods-AlbaReview-AlbaReviewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -907,7 +907,7 @@
 		};
 		CAF3E10F29C4AE170059EA85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0367FAE0028F210C4F37FF1C /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */;
+			baseConfigurationReference = C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
