@@ -14,6 +14,11 @@
 		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
 		CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56529C9800700B5798E /* UITextField++.swift */; };
 		CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56729C98A1600B5798E /* UIViewController++.swift */; };
+		CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */; };
+		CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */; };
+		CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */; };
+		CAE42AC629C9A0570057599A /* YearModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC529C9A0560057599A /* YearModel.swift */; };
+		CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC729C9A2ED0057599A /* StartViewModel.swift */; };
 		CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */; };
 		CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */; };
 		CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E0E429C4AE150059EA85 /* LoginVC.swift */; };
@@ -56,6 +61,11 @@
 		CAB1C56329C97CAD00B5798E /* UILabel++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++.swift"; sourceTree = "<group>"; };
 		CAB1C56529C9800700B5798E /* UITextField++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField++.swift"; sourceTree = "<group>"; };
 		CAB1C56729C98A1600B5798E /* UIViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController++.swift"; sourceTree = "<group>"; };
+		CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAgeSexVC.swift; sourceTree = "<group>"; };
+		CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearViewModel.swift; sourceTree = "<group>"; };
+		CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearVC.swift; sourceTree = "<group>"; };
+		CAE42AC529C9A0560057599A /* YearModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearModel.swift; sourceTree = "<group>"; };
+		CAE42AC729C9A2ED0057599A /* StartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		CAF3E0DD29C4AE150059EA85 /* AlbaReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbaReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF3E0E029C4AE150059EA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF3E0E229C4AE150059EA85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,7 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				CAF3E0E429C4AE150059EA85 /* LoginVC.swift */,
+				CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */,
 				CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */,
+				CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -210,6 +222,7 @@
 		CA702BB629C4BF0900533B3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CAE42AC529C9A0560057599A /* YearModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +230,8 @@
 		CA702BB729C4BF1000533B3A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CAE42AC729C9A2ED0057599A /* StartViewModel.swift */,
+				CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -583,12 +598,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */,
+				CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */,
 				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
 				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
+				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
+				CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */,
+				CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */,
 				CAF3E0E129C4AE150059EA85 /* AppDelegate.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
+				CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

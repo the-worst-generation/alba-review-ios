@@ -9,6 +9,8 @@ import UIKit
 
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class LoginNickNameViewController: UIViewController {
     //MARK: - Property
@@ -56,6 +58,8 @@ class LoginNickNameViewController: UIViewController {
         $0.setTitle("다음", for: .normal)
     }
     
+    let disposeBag = DisposeBag()
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -63,12 +67,13 @@ class LoginNickNameViewController: UIViewController {
         setUpUI()
         setAddView()
         setConstraints()
-
+        bind()
     }
     
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
+        setUpNavigationBar("1/3", color: .white)
     }
     private func setAddView() {
         
@@ -134,6 +139,12 @@ class LoginNickNameViewController: UIViewController {
         }
     }
     
+    private func bind() {
+        nextButton.rx.tap
+            .bind(onNext: {
+                self.navigationController?.pushViewController(LoginAgeSexViewController(), animated: true)
+            }).disposed(by: disposeBag)
+    }
     
     
     

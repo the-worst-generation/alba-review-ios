@@ -9,6 +9,15 @@ import UIKit
 
 extension UIViewController {
     
+    func setUpNavigationBar(_ title: String, color: UIColor) {
+        self.navigationItem.title = title
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = color
+    }
+    
     func setBottomBorder(sender: UIView, width: CGFloat, height: CGFloat, color: UIColor) {
         
         let border = CALayer()

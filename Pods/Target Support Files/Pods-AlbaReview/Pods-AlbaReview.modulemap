@@ -1,6 +1,0 @@
-framework module Pods_AlbaReview {
-  umbrella header "Pods-AlbaReview-umbrella.h"
-
-  export *
-  module * { export * }
-}
