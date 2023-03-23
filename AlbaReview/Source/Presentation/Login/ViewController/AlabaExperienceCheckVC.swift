@@ -59,6 +59,7 @@ class AlabaExperiecnceCheckViewController: UIViewController{
     private func setUpUI() {
         view.backgroundColor = .white
         setUpNavigationBar("3/3", color: .white)
+        
     }
     private func setAddView() {
         

@@ -37,13 +37,15 @@ class AlbaExperienceViewController: UIViewController {
         setConstraints()
         bind()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+
+        navigationItem.largeTitleDisplayMode = .always
+    }
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
         setUpNavigationBar("알바 경력", color: .white)
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     private func setAddView() {
         
@@ -70,6 +72,12 @@ class AlbaExperienceViewController: UIViewController {
     }
     
     private func bind() {
+        
+        plusButton.rx.tap
+            .bind(onNext: {
+                self.navigationController?.pushViewController(AddAlbaExperienceViewController(),
+                                                              animated: true)
+            }).disposed(by: disposeBag)
     }
     
     
