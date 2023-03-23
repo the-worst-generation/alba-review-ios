@@ -148,6 +148,14 @@ class LoginViewController: UIViewController {
                 let vc = LoginNickNameViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
+        
+        noLoginButton.rx.tap
+            .bind(onNext: {
+                let vc = HomeViewController()
+                vc.modalPresentationStyle = .fullScreen
+                
+                self.present(vc, animated: true)
+            })
     }
     
 }
