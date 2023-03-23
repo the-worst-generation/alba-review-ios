@@ -51,13 +51,19 @@ class AddAlbaExperienceViewController: UIViewController {
         $0.setTitle("추가하기", for: .normal)
     }
     
+    let disposeBag = DisposeBag()
+    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super .viewDidLoad()
+        
         setUpUI()
         setAddView()
         setConstraints()
+    
+
+        bind()
     }
     
     
@@ -151,5 +157,15 @@ class AddAlbaExperienceViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+    
+    private func bind() {
+        print("asdf")
+        
+        placeSearchButton.rx.tap
+            .bind(onNext: {
+                self.present(SearchPlaceViewController(),
+                             animated: true)
+            }).disposed(by: disposeBag)
     }
 }
