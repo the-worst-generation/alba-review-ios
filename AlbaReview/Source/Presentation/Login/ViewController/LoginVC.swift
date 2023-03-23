@@ -155,7 +155,7 @@ class LoginViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 
                 self.present(vc, animated: true)
-            })
+            }).disposed(by: disposeBag)
     }
     
 }
