@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E857360128C3A559132E245 /* Pods_AlbaReview.framework */; };
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
+		CA6E5CEB29CC356400B28059 /* AddAlbaExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */; };
 		CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */; };
 		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
 		CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56529C9800700B5798E /* UITextField++.swift */; };
@@ -57,6 +58,7 @@
 		698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbaExperience.swift; sourceTree = "<group>"; };
 		CA769E4929C4E17E008387F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNickNameVC.swift; sourceTree = "<group>"; };
 		CAB1C56329C97CAD00B5798E /* UILabel++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */,
 				CAE42AC929C9B31C0057599A /* AlabaExperienceCheckVC.swift */,
 				CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */,
+				CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */,
 				CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */,
 			);
 			path = ViewController;
@@ -617,6 +620,7 @@
 				CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
 				CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */,
+				CA6E5CEB29CC356400B28059 /* AddAlbaExperience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
