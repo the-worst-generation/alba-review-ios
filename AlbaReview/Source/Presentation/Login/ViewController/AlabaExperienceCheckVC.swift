@@ -59,6 +59,7 @@ class AlabaExperiecnceCheckViewController: UIViewController{
     private func setUpUI() {
         view.backgroundColor = .white
         setUpNavigationBar("3/3", color: .white)
+        
     }
     private func setAddView() {
         
@@ -92,9 +93,9 @@ class AlabaExperiecnceCheckViewController: UIViewController{
     }
     
     private func bind() {
-        nextButton.rx.tap
+        yesButton.rx.tap
             .bind(onNext: {
-                self.navigationController?.pushViewController(LoginAgeSexViewController(), animated: true)
+                self.navigationController?.pushViewController(AlbaExperienceViewController(), animated: true)
             }).disposed(by: disposeBag)
     }
     

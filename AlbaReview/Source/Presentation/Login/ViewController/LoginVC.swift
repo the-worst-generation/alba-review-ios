@@ -50,7 +50,8 @@ class LoginViewController: UIViewController {
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
-        
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.prefersLargeTitles = true
         //Button SetUp
         googleLoginButton = UIButton(
             configuration: setConfigButton(
