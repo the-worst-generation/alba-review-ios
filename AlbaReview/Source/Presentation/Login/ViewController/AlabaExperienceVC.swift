@@ -36,16 +36,25 @@ class AlbaExperienceViewController: UIViewController {
         setAddView()
         setConstraints()
         bind()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
-
+        
+        setUpNavigationBar("알바 경력", color: .white)
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super .viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
-        setUpNavigationBar("알바 경력", color: .white)
     }
     private func setAddView() {
         

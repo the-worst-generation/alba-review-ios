@@ -50,8 +50,7 @@ class LoginViewController: UIViewController {
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
-        navigationItem.largeTitleDisplayMode = .never
-        navigationController?.navigationBar.prefersLargeTitles = true
+
         //Button SetUp
         googleLoginButton = UIButton(
             configuration: setConfigButton(
@@ -148,6 +147,14 @@ class LoginViewController: UIViewController {
             .bind(onNext: {
                 let vc = LoginNickNameViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
+        
+        noLoginButton.rx.tap
+            .bind(onNext: {
+                let vc = HomeViewController()
+                vc.modalPresentationStyle = .fullScreen
+                
+                self.present(vc, animated: true)
             }).disposed(by: disposeBag)
     }
     
