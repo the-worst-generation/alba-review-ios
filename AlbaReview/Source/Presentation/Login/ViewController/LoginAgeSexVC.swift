@@ -62,12 +62,17 @@ class LoginAgeSexViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpNavigationBar("2/3", color: .black)
         setUpUI()
         setAddView()
         setUpConstraints()
         
         bind()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        
+        setUpNavigationBar("2/3", color: .black)
     }
     
     override func viewDidLayoutSubviews() {

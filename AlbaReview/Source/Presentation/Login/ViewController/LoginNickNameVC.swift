@@ -70,10 +70,14 @@ class LoginNickNameViewController: UIViewController {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        setUpNavigationBar("1/3", color: .white)
+    }
+    
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
-        setUpNavigationBar("1/3", color: .white)
     }
     private func setAddView() {
         

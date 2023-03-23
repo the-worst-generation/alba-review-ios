@@ -43,6 +43,7 @@ class AlabaExperiecnceCheckViewController: UIViewController{
         $0.setTitle("다음", for: .normal)
     }
     
+
     let disposeBag = DisposeBag()
     
     //MARK: - LifeCycle
@@ -55,10 +56,15 @@ class AlabaExperiecnceCheckViewController: UIViewController{
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        
+        setUpNavigationBar("3/3", color: .white)
+    }
+    
     //MARK: - SetUp
     private func setUpUI() {
         view.backgroundColor = .white
-        setUpNavigationBar("3/3", color: .white)
         
     }
     private func setAddView() {

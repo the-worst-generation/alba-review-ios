@@ -55,12 +55,11 @@ class AddAlbaExperienceViewController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super .viewDidLoad()
-        
-        navigationItem.largeTitleDisplayMode = .never
         setUpUI()
         setAddView()
         setConstraints()
     }
+    
     
     override func viewDidLayoutSubviews() {
         super .viewDidLayoutSubviews()
