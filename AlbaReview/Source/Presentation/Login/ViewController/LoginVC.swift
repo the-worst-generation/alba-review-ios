@@ -151,10 +151,10 @@ class LoginViewController: UIViewController {
         
         noLoginButton.rx.tap
             .bind(onNext: {
-                let vc = HomeViewController()
-                vc.modalPresentationStyle = .fullScreen
+                let tabBar = AppTabBarController()
+                tabBar.modalPresentationStyle = .fullScreen
                 
-                self.present(vc, animated: true)
+                self.present(tabBar, animated: true)
             }).disposed(by: disposeBag)
     }
     
