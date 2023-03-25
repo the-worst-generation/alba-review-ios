@@ -12,6 +12,7 @@ import SnapKit
 import Then
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 class LoginViewController: UIViewController {
 
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController {
     }
     
     let disposeBag = DisposeBag()
+    var locationManger: CLLocationManager!
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -45,6 +47,11 @@ class LoginViewController: UIViewController {
         setAddView()
         setUpConstraints()
         bind()
+        
+        locationManger =  CLLocationManager()
+        locationManger.delegate = self
+        locationManger.requestWhenInUseAuthorization()
+        locationManger.startUpdatingLocation()
     }
     
     //MARK: - SetUp
@@ -158,4 +165,26 @@ class LoginViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+}
+
+extension LoginViewController: CLLocationManagerDelegate {
+    func getLocationUsagePermission() {
+        self.locationManger.requestWhenInUseAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined, .restricted:
+            print("Gps 권한 설정되지 않음")
+            getLocationUsagePermission()
+        case .denied:
+            print("GPS 권한 요청 거부")
+        case .authorizedAlways, .authorizedWhenInUse:
+            getLocationUsagePermission()
+            print("GPS 권한 설정됨")
+        default:
+            print("GPS Default")
+        }
+    }
 }
