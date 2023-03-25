@@ -11,16 +11,26 @@ import Then
 import SnapKit
 import RxCocoa
 import RxSwift
+import Alamofire
 
 class SearchPlaceViewController: UIViewController {
     
-    let albaPlaceView = UIView()
-    let albaPlaceLabel = UILabel().then {
-        $0.text = "알바 지점"
+    let albaPlaceView = UIView().then {
+        
+        $0.backgroundColor = .white
+        $0.layer.masksToBounds = false
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowOpacity = 0.5
+        $0.layer.shadowOffset = CGSize(width: 0, height: 2)
+        $0.layer.shadowRadius = 2
+    }
+    let albaPlaceTextField = UITextField().then {
+        $0.placeholder = "장소 검색"
     }
     let placeSearchButton = UIButton().then {
         $0.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
     }
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -28,6 +38,8 @@ class SearchPlaceViewController: UIViewController {
         setUpUI()
         setAddView()
         setConstraints()
+        
+        bind()
     }
     
     //MARK: - SetUp
@@ -38,7 +50,7 @@ class SearchPlaceViewController: UIViewController {
     private func setAddView() {
     
         [
-            albaPlaceLabel,
+            albaPlaceTextField,
             placeSearchButton
         ]   .forEach { albaPlaceView.addSubview($0) }
         
@@ -49,13 +61,12 @@ class SearchPlaceViewController: UIViewController {
     private func setConstraints() {
         
         albaPlaceView.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(10)
-            make.width.equalTo(300)
-            make.height.equalTo(30)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
+            make.height.equalTo(40)
         }
         
-        albaPlaceLabel.snp.makeConstraints { make in
+        albaPlaceTextField.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
             make.centerY.equalToSuperview()
         }
@@ -64,6 +75,10 @@ class SearchPlaceViewController: UIViewController {
             make.trailing.equalToSuperview().inset(8)
             make.centerY.equalToSuperview()
         }
+        
+    }
+    
+    private func bind() {
         
     }
 }

@@ -13,7 +13,8 @@
 		CA1EC4B929CC8A710074B5F0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE4A0C829CC53BC00368FE1 /* libc++.tbd */; };
 		CA1EC4BA29CC8A780074B5F0 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE4A0C929CC53C400368FE1 /* libxml2.tbd */; };
 		CA1EC4BB29CC8A810074B5F0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE4A0CA29CC53CC00368FE1 /* libsqlite3.tbd */; };
-		CA6E5CEB29CC356400B28059 /* AddAlbaExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */; };
+		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
+		CA6E5CEB29CC356400B28059 /* AddAlbaExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */; };
 		CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */; };
 		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
 		CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56529C9800700B5798E /* UITextField++.swift */; };
@@ -96,7 +97,8 @@
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA05453F29CC8597003D36F2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		CA1EC4B729CC8A570074B5F0 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbaExperience.swift; sourceTree = "<group>"; };
+		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
+		CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbaExperienceVC.swift; sourceTree = "<group>"; };
 		CA769E4929C4E17E008387F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNickNameVC.swift; sourceTree = "<group>"; };
 		CAB1C56329C97CAD00B5798E /* UILabel++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel++.swift"; sourceTree = "<group>"; };
@@ -339,8 +341,9 @@
 				CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */,
 				CAE42AC929C9B31C0057599A /* AlabaExperienceCheckVC.swift */,
 				CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */,
-				CA6E5CEA29CC356400B28059 /* AddAlbaExperience.swift */,
+				CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */,
 				CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */,
+				CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */,
 				CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */,
 				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
+				CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */,
 				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
@@ -816,7 +820,7 @@
 				CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
 				CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */,
-				CA6E5CEB29CC356400B28059 /* AddAlbaExperience.swift in Sources */,
+				CA6E5CEB29CC356400B28059 /* AddAlbaExperienceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
