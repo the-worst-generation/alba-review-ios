@@ -9,9 +9,8 @@ import UIKit
 import CoreLocation
 
 
-class HomeViewController: UIViewController, MTMapViewDelegate {
+class HomeViewController: UIViewController {
 
-    var mapView: MTMapView?
     
     let locationService = LocationManager.shared
     override func viewDidLoad() {
@@ -21,25 +20,7 @@ class HomeViewController: UIViewController, MTMapViewDelegate {
     }
     
     private func createMapView() {
-        
-//        locationService.locationManager.delegate = self
-        mapView = MTMapView(frame: view.bounds)
-        if let mapView = mapView {
-            mapView.delegate = self
-            mapView.baseMapType = .standard
-            
-            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.576568,
-                                                                    longitude: 127.029148)),
-                                 animated: true)
-            mapView.showCurrentLocationMarker = true
-            
-            DispatchQueue.global().async {
-                if CLLocationManager.locationServicesEnabled() {
-                    mapView.currentLocationTrackingMode = .onWithoutHeading
-                }
-            }
-            view.addSubview(mapView)
-        }
+
     }
 }
 
