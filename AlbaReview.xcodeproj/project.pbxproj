@@ -22,6 +22,7 @@
 		CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968729CED47C004CA2CE /* AppTabBarController.swift */; };
 		CABC968A29CED9E7004CA2CE /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968929CED9E7004CA2CE /* WriteReviewViewController.swift */; };
 		CABC968C29CED9FF004CA2CE /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968B29CED9FF004CA2CE /* MyPageViewController.swift */; };
+		CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968E29CEEA61004CA2CE /* LocationManager.swift */; };
 		CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */; };
 		CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */; };
 		CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */; };
@@ -110,6 +111,7 @@
 		CABC968729CED47C004CA2CE /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		CABC968929CED9E7004CA2CE /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CABC968B29CED9FF004CA2CE /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		CABC968E29CEEA61004CA2CE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAgeSexVC.swift; sourceTree = "<group>"; };
 		CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearViewModel.swift; sourceTree = "<group>"; };
 		CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearVC.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		CA702BAD29C4BE1F00533B3A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CABC968D29CEEA49004CA2CE /* Location */,
 				CA702BAF29C4BE7600533B3A /* Presentation */,
 				CA702BAE29C4BE6100533B3A /* Extenstion */,
 			);
@@ -435,6 +438,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CABC968D29CEEA49004CA2CE /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CABC968E29CEEA61004CA2CE /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		CAE4A07B29CC51CB00368FE1 /* DaumMap.embeddedframework */ = {
@@ -830,6 +841,7 @@
 				CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */,
 				CABC968C29CED9FF004CA2CE /* MyPageViewController.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
+				CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */,
 				CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */,
 				CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */,
 				CA6E5CEB29CC356400B28059 /* AddAlbaExperienceVC.swift in Sources */,

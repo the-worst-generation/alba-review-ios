@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     }
     
     let disposeBag = DisposeBag()
-    var locationManger: CLLocationManager!
+    let locationService = LocationManager.shared
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -48,10 +48,9 @@ class LoginViewController: UIViewController {
         setUpConstraints()
         bind()
         
-        locationManger =  CLLocationManager()
-        locationManger.delegate = self
-        locationManger.requestWhenInUseAuthorization()
-        locationManger.startUpdatingLocation()
+        
+        locationService.locationManager.delegate = self
+        locationService.locationManager.requestWhenInUseAuthorization()
     }
     
     //MARK: - SetUp
@@ -169,21 +168,23 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: CLLocationManagerDelegate {
     func getLocationUsagePermission() {
-        self.locationManger.requestWhenInUseAuthorization()
+        locationService.locationManager.requestWhenInUseAuthorization()
     }
     
     func locationManager(_ manager: CLLocationManager,
                          didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined, .restricted:
+            locationService.locationManager.stopUpdatingLocation()
             print("Gps 권한 설정되지 않음")
-            getLocationUsagePermission()
         case .denied:
+            locationService.locationManager.stopUpdatingLocation()
             print("GPS 권한 요청 거부")
         case .authorizedAlways, .authorizedWhenInUse:
-            getLocationUsagePermission()
+            locationService.locationManager.startUpdatingLocation()
             print("GPS 권한 설정됨")
         default:
+            locationService.locationManager.stopUpdatingLocation()
             print("GPS Default")
         }
     }
