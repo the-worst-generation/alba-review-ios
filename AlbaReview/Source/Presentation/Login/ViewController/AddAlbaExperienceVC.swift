@@ -27,19 +27,37 @@ class AddAlbaExperienceViewController: UIViewController {
                           color: .black)
     }
     
-    let albaPlaceView = UIView()
+    let albaPlaceView = UIView().then {
+        $0.backgroundColor = .white
+        $0.layer.masksToBounds = false
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowOpacity = 0.5
+        $0.layer.shadowOffset = CGSize(width: 0, height: 2)
+        $0.layer.shadowRadius = 2
+    }
     let albaPlaceLabel = UILabel().then {
+        $0.layer.masksToBounds = true
         $0.text = "알바 지점"
     }
     let placeSearchButton = UIButton().then {
+        $0.layer.masksToBounds = true
         $0.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
     }
     
-    let periodDropView = UIView()
+    let periodDropView = UIView().then {
+        $0.backgroundColor = .white
+        $0.layer.masksToBounds = false
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowOpacity = 0.5
+        $0.layer.shadowOffset = CGSize(width: 0, height: 2)
+        $0.layer.shadowRadius = 2
+    }
     let periodLabel = UILabel().then {
+        $0.layer.masksToBounds = true
         $0.text = "알바 기간"
     }
     let periodButton = UIButton().then {
+        $0.layer.masksToBounds = true
         $0.setImage(UIImage(named: "downPolygon"), for: .normal)
     }
     
@@ -51,31 +69,26 @@ class AddAlbaExperienceViewController: UIViewController {
         $0.setTitle("추가하기", for: .normal)
     }
     
+    let disposeBag = DisposeBag()
+    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super .viewDidLoad()
+        
         setUpUI()
         setAddView()
         setConstraints()
+    
+
+        bind()
     }
     
     
     override func viewDidLayoutSubviews() {
         super .viewDidLayoutSubviews()
 
-    //TODO: - 그림자 넣기
-        [
-            albaPlaceView,
-            periodDropView
-        ]   .forEach {
-            $0.layer.borderWidth = 1
-            $0.layer.cornerRadius = 10
-            $0.layer.shadowColor = UIColor.black.cgColor
-            $0.layer.shadowOpacity = 0.25
-            $0.layer.shadowOffset = CGSize(width: 0, height: 2)
-            $0.layer.shadowRadius = 2
-        }
+
     }
     
     
@@ -151,5 +164,14 @@ class AddAlbaExperienceViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+    
+    private func bind() {
+        
+        placeSearchButton.rx.tap
+            .bind(onNext: {
+                self.present(SearchPlaceViewController(),
+                             animated: true)
+            }).disposed(by: disposeBag)
     }
 }

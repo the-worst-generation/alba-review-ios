@@ -12,6 +12,7 @@ import SnapKit
 import Then
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 class LoginViewController: UIViewController {
 
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController {
     }
     
     let disposeBag = DisposeBag()
+    let locationService = LocationManager.shared
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -45,6 +47,10 @@ class LoginViewController: UIViewController {
         setAddView()
         setUpConstraints()
         bind()
+        
+        
+        locationService.locationManager.delegate = self
+        locationService.locationManager.requestWhenInUseAuthorization()
     }
     
     //MARK: - SetUp
@@ -151,11 +157,35 @@ class LoginViewController: UIViewController {
         
         noLoginButton.rx.tap
             .bind(onNext: {
-                let vc = HomeViewController()
-                vc.modalPresentationStyle = .fullScreen
+                let tabBar = AppTabBarController()
+                tabBar.modalPresentationStyle = .fullScreen
                 
-                self.present(vc, animated: true)
+                self.present(tabBar, animated: true)
             }).disposed(by: disposeBag)
     }
     
+}
+
+extension LoginViewController: CLLocationManagerDelegate {
+    func getLocationUsagePermission() {
+        locationService.locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined, .restricted:
+            locationService.locationManager.stopUpdatingLocation()
+            print("Gps 권한 설정되지 않음")
+        case .denied:
+            locationService.locationManager.stopUpdatingLocation()
+            print("GPS 권한 요청 거부")
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationService.locationManager.startUpdatingLocation()
+            print("GPS 권한 설정됨")
+        default:
+            locationService.locationManager.stopUpdatingLocation()
+            print("GPS Default")
+        }
+    }
 }
