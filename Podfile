@@ -14,8 +14,7 @@ target 'AlbaReview' do
   pod 'Alamofire'
   pod 'TagListView'
   pod 'DropDown'
-  pod 'KakaoMapsSDK'
-
+  pod 'NMapsMap'
   use_frameworks!
 
   # Pods for AlbaReview

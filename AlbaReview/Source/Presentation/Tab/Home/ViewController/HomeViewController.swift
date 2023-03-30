@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import NMapsMap
 
 
 class HomeViewController: UIViewController {
@@ -20,7 +21,8 @@ class HomeViewController: UIViewController {
     }
     
     private func createMapView() {
-
+        let mapView = NMFNaverMapView(frame: view.frame)
+        view.addSubview(mapView)
     }
 }
 
