@@ -11,15 +11,21 @@ import CoreLocation
 import NMapsMap
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
-
+    
+    lazy var mapView = NMFMapView(frame: view.frame)
     var searchButton: UIButton!
     let currentLocationButton = UIButton().then {
         $0.setImage(UIImage(named: "currentLocation"), for: .normal)
     }
     
     let locationService = LocationManager.shared
+    let disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,10 +34,10 @@ class HomeViewController: UIViewController {
         setUpUI()
         setAddView()
         setConstraints()
+        bind()
     }
     
     private func createMapView() {
-        let mapView = NMFMapView(frame: view.frame)
         view.addSubview(mapView)
     }
 
@@ -42,6 +48,7 @@ class HomeViewController: UIViewController {
     
     private func setAddView() {
         [
+            mapView,
             searchButton,
             currentLocationButton
         ].forEach { view.addSubview($0) }
@@ -73,6 +80,13 @@ class HomeViewController: UIViewController {
         config.cornerStyle = .large
         config.baseForegroundColor = .black
         searchButton = UIButton(configuration: config)
+    }
+    
+    private func bind() {
+        currentLocationButton.rx.tap
+            .bind(onNext: {
+                self.mapView.positionMode = .compass
+            }).disposed(by: disposeBag)
     }
 }
 
