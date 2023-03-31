@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.6.4)
   - Differentiator (5.0.0)
   - DropDown (2.3.13)
+  - GooglePlaces (6.2.1)
   - Kingfisher (7.5.0)
   - NMapsGeometry (1.0.1)
   - NMapsMap (3.16.2):
@@ -30,6 +31,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DropDown
+  - GooglePlaces
   - Kingfisher
   - NMapsMap
   - ReactorKit
@@ -46,6 +48,7 @@ SPEC REPOS:
     - Alamofire
     - Differentiator
     - DropDown
+    - GooglePlaces
     - Kingfisher
     - NMapsGeometry
     - NMapsMap
@@ -64,6 +67,7 @@ SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
   Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
   NMapsGeometry: 53c573ead66466681cf123f99f698dc8071a4b83
   NMapsMap: aaa64717249b06ae82c3a3addb3a01f0e33100ab
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 1f14f59120d24cb1f327c568b9061dff0a3cbb78
+PODFILE CHECKSUM: 5f2808130c55fa2236df4639affc54b84017ec16
 
 COCOAPODS: 1.11.3

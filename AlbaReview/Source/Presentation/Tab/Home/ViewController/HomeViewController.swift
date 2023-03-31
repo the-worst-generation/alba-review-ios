@@ -58,6 +58,7 @@ class HomeViewController: UIViewController {
         searchButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(50)
             make.top.equalToSuperview().inset(70)
+            make.height.equalTo(50)
         }
         
         currentLocationButton.snp.makeConstraints { make in
@@ -69,8 +70,7 @@ class HomeViewController: UIViewController {
     private func configureButton() {
         
         var config = UIButton.Configuration.plain()
-        var attrTitle = AttributedString.init("구, 동, 장소, 주소 검색")
-        //attrTitle.foregroundColor = .systemGray5
+        let attrTitle = AttributedString.init("구, 동, 장소, 주소 검색")
         
         config.attributedTitle = attrTitle
         config.background.backgroundColor = .white
@@ -85,7 +85,15 @@ class HomeViewController: UIViewController {
     private func bind() {
         currentLocationButton.rx.tap
             .bind(onNext: {
-                self.mapView.positionMode = .compass
+                self.mapView.positionMode = .direction
+            }).disposed(by: disposeBag)
+        
+        searchButton.rx.tap
+            .bind(onNext: {
+                print("asdf")
+                let vc = SearchPlaceViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
             }).disposed(by: disposeBag)
     }
 }
