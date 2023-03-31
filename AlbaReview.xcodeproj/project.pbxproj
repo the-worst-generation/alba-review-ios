@@ -10,6 +10,10 @@
 		26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E857360128C3A559132E245 /* Pods_AlbaReview.framework */; };
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
 		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
+		CA5FE21A29D568FD00E74769 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21929D568FD00E74769 /* Storage.swift */; };
+		CA5FE21C29D5695E00E74769 /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21B29D5695E00E74769 /* ServiceApi.swift */; };
+		CA5FE21E29D56AD000E74769 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */; };
+		CA5FE22129D585EF00E74769 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE22029D585EF00E74769 /* SearchCell.swift */; };
 		CA6E5CEB29CC356400B28059 /* AddAlbaExperienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */; };
 		CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */; };
 		CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1C56329C97CAD00B5798E /* UILabel++.swift */; };
@@ -65,6 +69,10 @@
 		C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
+		CA5FE21929D568FD00E74769 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		CA5FE21B29D5695E00E74769 /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
+		CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		CA5FE22029D585EF00E74769 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbaExperienceVC.swift; sourceTree = "<group>"; };
 		CA769E4929C4E17E008387F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB1C56129C97C3900B5798E /* LoginNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNickNameVC.swift; sourceTree = "<group>"; };
@@ -148,6 +156,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA5FE21829D568E200E74769 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CA5FE21929D568FD00E74769 /* Storage.swift */,
+				CA5FE21B29D5695E00E74769 /* ServiceApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CA5FE21F29D585E100E74769 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA5FE22029D585EF00E74769 /* SearchCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA702BAC29C4BE0D00533B3A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +186,7 @@
 		CA702BAD29C4BE1F00533B3A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FE21829D568E200E74769 /* Networking */,
 				CABC968D29CEEA49004CA2CE /* Location */,
 				CA702BAF29C4BE7600533B3A /* Presentation */,
 				CA702BAE29C4BE6100533B3A /* Extenstion */,
@@ -200,6 +226,7 @@
 		CA702BB129C4BEA500533B3A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FE21F29D585E100E74769 /* View */,
 				CA702BB729C4BF1000533B3A /* ViewModel */,
 				CA702BB629C4BF0900533B3A /* Model */,
 				CA702BB529C4BF0300533B3A /* ViewController */,
@@ -265,6 +292,7 @@
 			children = (
 				CAE42AC729C9A2ED0057599A /* StartViewModel.swift */,
 				CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */,
+				CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -406,6 +434,7 @@
 				CAF3E0DA29C4AE150059EA85 /* Frameworks */,
 				CAF3E0DB29C4AE150059EA85 /* Resources */,
 				9E9793CC4B714F8CA138D331 /* [CP] Embed Pods Frameworks */,
+				49A4657C301FC133C04FB862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -444,6 +473,7 @@
 				CAF3E0FA29C4AE170059EA85 /* Frameworks */,
 				CAF3E0FB29C4AE170059EA85 /* Resources */,
 				FDC8D8AC99A067B532733D4C /* [CP] Embed Pods Frameworks */,
+				21307230878F0D5865EBB245 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -547,6 +577,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		21307230878F0D5865EBB245 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49A4657C301FC133C04FB862 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		90E8F32245A7E82EBFB6D0F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,14 +697,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABC968A29CED9E7004CA2CE /* WriteReviewViewController.swift in Sources */,
+				CA5FE21A29D568FD00E74769 /* Storage.swift in Sources */,
 				CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */,
 				CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */,
+				CA5FE21C29D5695E00E74769 /* ServiceApi.swift in Sources */,
 				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
 				CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */,
 				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
 				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
+				CA5FE22129D585EF00E74769 /* SearchCell.swift in Sources */,
 				CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */,
 				CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */,
 				CAE42AD029C9C4670057599A /* AlabaExperienceVC.swift in Sources */,
@@ -648,6 +715,7 @@
 				CAE4A07A29CC4F7500368FE1 /* HomeViewController.swift in Sources */,
 				CAE42ACA29C9B31C0057599A /* AlabaExperienceCheckVC.swift in Sources */,
 				CABC968C29CED9FF004CA2CE /* MyPageViewController.swift in Sources */,
+				CA5FE21E29D56AD000E74769 /* SearchViewModel.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
 				CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */,
 				CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */,

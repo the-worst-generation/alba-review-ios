@@ -15,6 +15,7 @@ target 'AlbaReview' do
   pod 'TagListView'
   pod 'DropDown'
   pod 'NMapsMap'
+  pod 'GooglePlaces'
   use_frameworks!
 
   # Pods for AlbaReview
