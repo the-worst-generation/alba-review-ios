@@ -36,7 +36,7 @@ class AppTabBarController: UITabBarController {
     func configureTabBar() {
         
         let homeVC = UINavigationController(rootViewController: HomeViewController())
-        let writeReviewVC = UINavigationController(rootViewController: WriteReviewViewController())
+        let writeReviewVC = UINavigationController(rootViewController: WritableReviewViewController())
         let myPageVC = UINavigationController(rootViewController: MyPageViewController())
         
         viewControllers = [homeVC, writeReviewVC, myPageVC]
