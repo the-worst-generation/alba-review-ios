@@ -120,6 +120,6 @@ extension WritableReviewCell {
         nameLabel.text = data.name
         reviewCosmos.rating = data.rating
         reviewCosmos.text = "(\(data.rating))"
-        reviewCountLabel.text = " 리뷰 개수 \(data.reviewCount)"    
+        reviewCountLabel.text = " 리뷰 개수 \(data.reviewCount)"
     }
 }
