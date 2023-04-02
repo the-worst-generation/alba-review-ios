@@ -6,3 +6,22 @@
 //
 
 import Foundation
+import RxDataSources
+
+struct WritableReviewSection {
+    var items: [Item]
+    
+    init(items: [WritableReviewData]) {
+        self.items = items
+    }
+}
+
+extension WritableReviewSection: SectionModelType {
+    typealias Item = WritableReviewData
+    
+    init(original: WritableReviewSection, items: [Item]) {
+        self = original
+        self.items = items
+        
+    }
+}

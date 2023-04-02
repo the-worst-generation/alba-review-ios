@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+import RxSwift
+import RxCocoa
+
+class WritableReviewViewModel {
+    
+    let writableReviewListSubject = BehaviorSubject<[WritableReviewSection]>(value: [WritableReviewSection(items: WritableReviewData.list)])
+}
