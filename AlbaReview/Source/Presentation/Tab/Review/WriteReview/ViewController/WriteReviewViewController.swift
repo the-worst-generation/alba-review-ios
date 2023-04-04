@@ -108,6 +108,16 @@ class WriteReviewViewController: UIViewController {
     }
     
     private func bind() {
+        
+        //Input
+        nextButton.rx.tap
+            .bind(onNext: {
+                self.navigationController?.pushViewController(WriteReviewRatingViewController(),
+                                                              animated: true)
+            }).disposed(by: disposeBag)
+        
+        
+        //Output
         tagListView.rx.delegate.onNext(self)
         
         viewModel.isEnableNextButton

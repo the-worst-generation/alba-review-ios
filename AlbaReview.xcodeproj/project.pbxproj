@@ -11,6 +11,7 @@
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
 		CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */; };
 		CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */; };
+		CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */; };
 		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
 		CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382129D9BFD20005B935 /* WritableViewController.swift */; };
 		CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */; };
@@ -77,6 +78,7 @@
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
+		CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewController.swift; sourceTree = "<group>"; };
 		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
 		CA54382129D9BFD20005B935 /* WritableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableViewController.swift; sourceTree = "<group>"; };
 		CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReivewModel.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */,
+				CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
 				CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */,
 				CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */,
+				CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */,
 				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
