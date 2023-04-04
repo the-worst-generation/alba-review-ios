@@ -26,7 +26,7 @@ class WriteReviewViewController: UIViewController {
                                                 height: view.frame.height)).then {
     
         $0.tagSelectedBackgroundColor = .systemCyan
-        $0.selectedTextColor = .systemCyan
+        $0.selectedTextColor = .white
         $0.marginX = 10
         $0.marginY = 20
         $0.borderColor = .systemGray2
@@ -56,17 +56,22 @@ class WriteReviewViewController: UIViewController {
     }
     
     let nextButton = UIButton().then {
+        $0.isEnabled = false
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemCyan
+        $0.backgroundColor = .systemGray2
         $0.setTitle("다음", for: .normal)
         
     }
+    
+    let disposeBag = DisposeBag()
+    let viewModel = WriteReviewViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         setAddView()
         setConstraints()
+        bind()
     }
     //MARK: - SetUp
     private func setUpUI() {
@@ -99,6 +104,33 @@ class WriteReviewViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(80)
             make.bottom.equalToSuperview()
+        }
+    }
+    
+    private func bind() {
+        tagListView.rx.delegate.onNext(self)
+        
+        viewModel.isEnableNextButton
+            .bind(onNext: {
+                self.setNextButtonEnable($0)
+            }).disposed(by: disposeBag)
+    }
+}
+
+extension WriteReviewViewController: TagListViewDelegate {
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagView.isSelected.toggle()
+        viewModel.tagTapSubject.onNext(tagView.isSelected)
+        viewModel.countTapTag()
+    }
+    
+    func setNextButtonEnable(_ isEnable: Bool) {
+        if isEnable {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = .systemCyan
+        } else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .systemGray2
         }
     }
 }
