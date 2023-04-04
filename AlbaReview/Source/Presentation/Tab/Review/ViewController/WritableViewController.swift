@@ -71,15 +71,26 @@ class WritableReviewViewController: UIViewController {
     
     private func bind() {
         
+        //Input
+        placeCollectionView.rx.modelSelected(WritableReviewData.self)
+            .bind(to: viewModel.selectedModelSubject)
+            .disposed(by: disposeBag)
         
-        
+        //Output
         viewModel.writableReviewListSubject
             .map { $0 }
             .bind(to: placeCollectionView.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
-        //Output
+        
         placeCollectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
+        
+        viewModel.isSelectedItem
+            .filter { $0 }
+            .bind(onNext: { _ in
+                self.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(WriteReviewViewController(), animated: true)
+            }).disposed(by: disposeBag)
     }
     
 }

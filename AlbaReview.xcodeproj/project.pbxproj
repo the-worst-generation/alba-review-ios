@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E857360128C3A559132E245 /* Pods_AlbaReview.framework */; };
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
+		CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */; };
 		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
 		CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382129D9BFD20005B935 /* WritableViewController.swift */; };
 		CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */; };
@@ -73,6 +74,7 @@
 		698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
 		CA54382129D9BFD20005B935 /* WritableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableViewController.swift; sourceTree = "<group>"; };
 		CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReivewModel.swift; sourceTree = "<group>"; };
@@ -164,6 +166,46 @@
 				698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA0DB39229DBEB580091DCB2 /* WriteReview */ = {
+			isa = PBXGroup;
+			children = (
+				CA0DB39629DBEB7F0091DCB2 /* View */,
+				CA0DB39529DBEB7A0091DCB2 /* ViewModel */,
+				CA0DB39429DBEB750091DCB2 /* Model */,
+				CA0DB39329DBEB670091DCB2 /* ViewController */,
+			);
+			path = WriteReview;
+			sourceTree = "<group>";
+		};
+		CA0DB39329DBEB670091DCB2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CA0DB39429DBEB750091DCB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA0DB39529DBEB7A0091DCB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA0DB39629DBEB7F0091DCB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CA54381F29D9BFA10005B935 /* ViewModel */ = {
@@ -293,6 +335,7 @@
 		CA702BB429C4BED500533B3A /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				CA0DB39229DBEB580091DCB2 /* WriteReview */,
 				CA54382329D9C0690005B935 /* View */,
 				CA54381F29D9BFA10005B935 /* ViewModel */,
 				CA54382029D9BFA90005B935 /* Model */,
@@ -732,6 +775,7 @@
 				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
 				CA54382D29D9CD300005B935 /* CALayer++.swift in Sources */,
 				CA54382929D9C6570005B935 /* WritableReviewSection.swift in Sources */,
+				CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */,
 				CA5FE22129D585EF00E74769 /* SearchCell.swift in Sources */,
 				CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */,
 				CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */,
