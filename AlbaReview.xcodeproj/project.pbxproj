@@ -12,6 +12,7 @@
 		CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */; };
 		CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */; };
 		CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */; };
+		CA0DB39E29DC24E70091DCB2 /* WriteReviewRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39D29DC24E60091DCB2 /* WriteReviewRatingViewModel.swift */; };
 		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
 		CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382129D9BFD20005B935 /* WritableViewController.swift */; };
 		CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */; };
@@ -79,6 +80,7 @@
 		CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
 		CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewController.swift; sourceTree = "<group>"; };
+		CA0DB39D29DC24E60091DCB2 /* WriteReviewRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewModel.swift; sourceTree = "<group>"; };
 		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
 		CA54382129D9BFD20005B935 /* WritableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableViewController.swift; sourceTree = "<group>"; };
 		CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReivewModel.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */,
+				CA0DB39D29DC24E60091DCB2 /* WriteReviewRatingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */,
 				CAB1C56629C9800700B5798E /* UITextField++.swift in Sources */,
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
+				CA0DB39E29DC24E70091DCB2 /* WriteReviewRatingViewModel.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
 				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
 				CA54382D29D9CD300005B935 /* CALayer++.swift in Sources */,

@@ -24,8 +24,8 @@ class WriteReviewRatingViewController: UIViewController {
     }
     
     let reviewCosmosView = CosmosView().then {
-        $0.rating = 3
-        $0.text = "3"
+        $0.rating = 3.0
+        $0.text = "3.0"
         $0.settings.textMargin = 10
         $0.settings.textFont = .systemFont(ofSize: 18)
         $0.settings.filledColor = .systemYellow
@@ -39,9 +39,9 @@ class WriteReviewRatingViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .systemGray2
         $0.setTitle("확인", for: .normal)
-        
     }
     
+    let viewModel = WriteReviewRatingViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -90,6 +90,7 @@ class WriteReviewRatingViewController: UIViewController {
     
     private func bind() {
         
+        //Input
         reviewCosmosView.rx.didTouchCosmos
             .onNext { rating in
                 self.reviewCosmosView.text = String(format: "%.1f", rating)
@@ -97,9 +98,43 @@ class WriteReviewRatingViewController: UIViewController {
         
         reviewTextView.rx.didBeginEditing
             .bind(onNext: { _ in
-                self.reviewTextView.text = ""
-                self.reviewTextView.textColor = .black
+                self.viewModel.didBeginEditingSubject.onNext(true)
+            }).disposed(by: disposeBag)
+        
+        reviewTextView.rx.text
+            .orEmpty
+            .bind(to: viewModel.reviewTextSubject)
+            .disposed(by: disposeBag)
+        
+        //Output
+        viewModel.isEnableNextButton
+            .bind(onNext: {
+                self.updateEnableButton($0)
+            }).disposed(by: disposeBag)
+        
+        viewModel.didBeginEditingSubject
+            .filter { $0 }
+            .bind(onNext: { _ in
+                self.updateReviewTextViewUI()
             }).disposed(by: disposeBag)
     }
 
+}
+
+extension WriteReviewRatingViewController {
+    
+    func updateEnableButton(_ isEnable: Bool) {
+        if isEnable {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = .systemCyan
+        } else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .systemGray2
+        }
+    }
+    
+    func updateReviewTextViewUI() {
+        self.reviewTextView.text = ""
+        self.reviewTextView.textColor = .black
+    }
 }

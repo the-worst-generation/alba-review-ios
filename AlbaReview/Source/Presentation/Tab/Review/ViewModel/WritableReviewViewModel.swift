@@ -11,12 +11,15 @@ import RxSwift
 import RxCocoa
 
 class WritableReviewViewModel {
+    static let shared = WritableReviewViewModel()
     
     let writableReviewListSubject = BehaviorSubject<[WritableReviewSection]>(value: [WritableReviewSection(items: WritableReviewData.list)])
     let selectedModelSubject = BehaviorSubject<WritableReviewData?>(value: nil)
     var isSelectedItem: Observable<Bool> {
         setIsSelectedItem()
     }
+    
+    private init () { }
     
 }
 

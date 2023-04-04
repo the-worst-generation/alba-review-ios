@@ -31,7 +31,7 @@ class WritableReviewViewController: UIViewController {
     }
     
     var datasource: RxCollectionViewSectionedReloadDataSource<WritableReviewSection>!
-    let viewModel = WritableReviewViewModel()
+    let viewModel = WritableReviewViewModel.shared
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
