@@ -73,7 +73,9 @@ class WritableReviewViewController: UIViewController {
         
         //Input
         placeCollectionView.rx.modelSelected(WritableReviewData.self)
-            .bind(to: viewModel.selectedModelSubject)
+            .bind(onNext: {
+                self.viewModel.selectedModelSubject.onNext($0)
+            })
             .disposed(by: disposeBag)
         
         //Output
@@ -88,8 +90,9 @@ class WritableReviewViewController: UIViewController {
         viewModel.isSelectedItem
             .filter { $0 }
             .bind(onNext: { _ in
-                self.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(WriteReviewViewController(), animated: true)
+                let vc = WriteReviewViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
     

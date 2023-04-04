@@ -42,6 +42,7 @@ class WriteReviewRatingViewController: UIViewController {
     }
     
     let viewModel = WriteReviewRatingViewModel()
+    let reviewViewModel = WritableReviewViewModel.shared
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -53,11 +54,16 @@ class WriteReviewRatingViewController: UIViewController {
         bind()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     //MARK: - SetUp
     private func setUpUI() {
         setUpNavigationBar("리뷰 작성", color: .white)
         view.backgroundColor = .white
     }
+    
     
     private func setAddView() {
         [
@@ -106,6 +112,13 @@ class WriteReviewRatingViewController: UIViewController {
             .bind(to: viewModel.reviewTextSubject)
             .disposed(by: disposeBag)
         
+        nextButton.rx.tap
+            .bind(onNext: { _ in
+                self.reviewViewModel.didTapWriteReviewEnd.onNext(true)
+                self.reviewViewModel.didTapWriteReviewEnd.onNext(false)
+            }).disposed(by: disposeBag)
+        
+        
         //Output
         viewModel.isEnableNextButton
             .bind(onNext: {
@@ -116,6 +129,13 @@ class WriteReviewRatingViewController: UIViewController {
             .filter { $0 }
             .bind(onNext: { _ in
                 self.updateReviewTextViewUI()
+            }).disposed(by: disposeBag)
+        
+        reviewViewModel.didTapWriteReviewEnd
+            .distinctUntilChanged()
+            .filter { $0 }
+            .bind(onNext: { _ in
+                self.navigationController?.popToRootViewController(animated: true)
             }).disposed(by: disposeBag)
     }
 

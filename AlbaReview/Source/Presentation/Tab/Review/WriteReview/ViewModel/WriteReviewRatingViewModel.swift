@@ -23,7 +23,7 @@ extension WriteReviewRatingViewModel {
     func setIsEnableNextButton() -> Observable<Bool>{
         return .combineLatest(didBeginEditingSubject,
                               reviewTextSubject) { isBegin, text in
-            if isBegin && text.count > 10 {
+            if isBegin && text.count > 15 {
                 return true
             }
             else { return false }

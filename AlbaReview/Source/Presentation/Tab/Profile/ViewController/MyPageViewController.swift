@@ -21,6 +21,7 @@ class MyPageViewController: UIViewController {
     private func setUpUI() {
         view.backgroundColor = .white
     }
+    
     private func setAddView() {
         
     }
