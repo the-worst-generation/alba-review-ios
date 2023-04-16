@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
     }
     
     let locationService = LocationManager.shared
+    
+    let reviewViewModel = WritableReviewViewModel.shared
     let disposeBag = DisposeBag()
     
     
@@ -83,6 +85,8 @@ class HomeViewController: UIViewController {
     }
     
     private func bind() {
+        
+        //Input
         currentLocationButton.rx.tap
             .bind(onNext: {
                 self.mapView.positionMode = .direction
@@ -95,6 +99,22 @@ class HomeViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
             }).disposed(by: disposeBag)
+        
+        //Output
+        reviewViewModel.writedReview
+            .filter { $0 != nil}
+            .compactMap { $0 }
+            .bind(onNext: {
+                self.createMarker($0.lattitude, $0.longtitude)
+            }).disposed(by: disposeBag)
+        
     }
 }
 
+extension HomeViewController {
+    func createMarker(_ lattitude: Double, _ longtitude: Double) {
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: lattitude, lng: longtitude)
+        marker.mapView = mapView
+    }
+}

@@ -31,7 +31,7 @@ class WritableReviewViewController: UIViewController {
     }
     
     var datasource: RxCollectionViewSectionedReloadDataSource<WritableReviewSection>!
-    let viewModel = WritableReviewViewModel()
+    let viewModel = WritableReviewViewModel.shared
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -71,15 +71,29 @@ class WritableReviewViewController: UIViewController {
     
     private func bind() {
         
+        //Input
+        placeCollectionView.rx.modelSelected(WritableReviewData.self)
+            .bind(onNext: {
+                self.viewModel.selectedModelSubject.onNext($0)
+            })
+            .disposed(by: disposeBag)
         
-        
+        //Output
         viewModel.writableReviewListSubject
             .map { $0 }
             .bind(to: placeCollectionView.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
-        //Output
+        
         placeCollectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
+        
+        viewModel.isSelectedItem
+            .filter { $0 }
+            .bind(onNext: { _ in
+                let vc = WriteReviewViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
     }
     
 }
@@ -100,5 +114,4 @@ extension WritableReviewViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
-    
 }
