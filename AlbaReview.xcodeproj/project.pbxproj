@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		26AE35B0E34B669DD8DA8949 /* Pods_AlbaReview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E857360128C3A559132E245 /* Pods_AlbaReview.framework */; };
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
+		CA09F7B829EE5E31008176C1 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA09F7B729EE5E31008176C1 /* API_KEY.plist */; };
+		CA09F7BA29EE5E5C008176C1 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09F7B929EE5E5C008176C1 /* Bundle++.swift */; };
 		CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */; };
 		CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */; };
 		CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */; };
@@ -20,7 +22,6 @@
 		CA54382929D9C6570005B935 /* WritableReviewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382829D9C6570005B935 /* WritableReviewSection.swift */; };
 		CA54382B29D9C8410005B935 /* WritableReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382A29D9C8410005B935 /* WritableReviewViewModel.swift */; };
 		CA54382D29D9CD300005B935 /* CALayer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382C29D9CD300005B935 /* CALayer++.swift */; };
-		CA5FE21A29D568FD00E74769 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21929D568FD00E74769 /* Storage.swift */; };
 		CA5FE21C29D5695E00E74769 /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21B29D5695E00E74769 /* ServiceApi.swift */; };
 		CA5FE21E29D56AD000E74769 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */; };
 		CA5FE22129D585EF00E74769 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FE22029D585EF00E74769 /* SearchCell.swift */; };
@@ -77,6 +78,8 @@
 		698BB1FE087CA9E4ECEEC48B /* Pods-AlbaReviewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0EC03EC8EB5A5AADAF939F4 /* Pods-AlbaReviewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReviewTests.debug.xcconfig"; path = "Target Support Files/Pods-AlbaReviewTests/Pods-AlbaReviewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA09F7B729EE5E31008176C1 /* API_KEY.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
+		CA09F7B929EE5E5C008176C1 /* Bundle++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
 		CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
 		CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		CA54382829D9C6570005B935 /* WritableReviewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReviewSection.swift; sourceTree = "<group>"; };
 		CA54382A29D9C8410005B935 /* WritableReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReviewViewModel.swift; sourceTree = "<group>"; };
 		CA54382C29D9CD300005B935 /* CALayer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++.swift"; sourceTree = "<group>"; };
-		CA5FE21929D568FD00E74769 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CA5FE21B29D5695E00E74769 /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		CA5FE22029D585EF00E74769 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -245,7 +247,6 @@
 		CA5FE21829D568E200E74769 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CA5FE21929D568FD00E74769 /* Storage.swift */,
 				CA5FE21B29D5695E00E74769 /* ServiceApi.swift */,
 			);
 			path = Networking;
@@ -263,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				CA769E4929C4E17E008387F4 /* Info.plist */,
+				CA09F7B729EE5E31008176C1 /* API_KEY.plist */,
 				CAF3E0E929C4AE170059EA85 /* Assets.xcassets */,
 				CAF3E0EB29C4AE170059EA85 /* LaunchScreen.storyboard */,
 			);
@@ -285,6 +287,7 @@
 			children = (
 				CAB1C56329C97CAD00B5798E /* UILabel++.swift */,
 				CAB1C56529C9800700B5798E /* UITextField++.swift */,
+				CA09F7B929EE5E5C008176C1 /* Bundle++.swift */,
 				CAB1C56729C98A1600B5798E /* UIViewController++.swift */,
 				CA54382C29D9CD300005B935 /* CALayer++.swift */,
 			);
@@ -509,7 +512,6 @@
 				CAF3E0DA29C4AE150059EA85 /* Frameworks */,
 				CAF3E0DB29C4AE150059EA85 /* Resources */,
 				9E9793CC4B714F8CA138D331 /* [CP] Embed Pods Frameworks */,
-				49A4657C301FC133C04FB862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -548,7 +550,6 @@
 				CAF3E0FA29C4AE170059EA85 /* Frameworks */,
 				CAF3E0FB29C4AE170059EA85 /* Resources */,
 				FDC8D8AC99A067B532733D4C /* [CP] Embed Pods Frameworks */,
-				21307230878F0D5865EBB245 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -608,6 +609,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA09F7B829EE5E31008176C1 /* API_KEY.plist in Resources */,
 				CAF3E0ED29C4AE170059EA85 /* LaunchScreen.storyboard in Resources */,
 				CAF3E0EA29C4AE170059EA85 /* Assets.xcassets in Resources */,
 			);
@@ -650,40 +652,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		21307230878F0D5865EBB245 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49A4657C301FC133C04FB862 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlbaReview/Pods-AlbaReview-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		90E8F32245A7E82EBFB6D0F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -771,7 +739,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA5FE21A29D568FD00E74769 /* Storage.swift in Sources */,
 				CAB1C56829C98A1600B5798E /* UIViewController++.swift in Sources */,
 				CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */,
 				CA5FE21C29D5695E00E74769 /* ServiceApi.swift in Sources */,
@@ -783,6 +750,7 @@
 				CAB1C56229C97C3900B5798E /* LoginNickNameVC.swift in Sources */,
 				CA0DB39E29DC24E70091DCB2 /* WriteReviewRatingViewModel.swift in Sources */,
 				CAF3E0E529C4AE150059EA85 /* LoginVC.swift in Sources */,
+				CA09F7BA29EE5E5C008176C1 /* Bundle++.swift in Sources */,
 				CAE42AC629C9A0570057599A /* YearModel.swift in Sources */,
 				CA54382D29D9CD300005B935 /* CALayer++.swift in Sources */,
 				CA54382929D9C6570005B935 /* WritableReviewSection.swift in Sources */,

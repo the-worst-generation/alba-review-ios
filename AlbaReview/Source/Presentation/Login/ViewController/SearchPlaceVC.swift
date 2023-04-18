@@ -11,7 +11,6 @@ import Then
 import SnapKit
 import RxCocoa
 import RxSwift
-import GooglePlaces
 
 class SearchPlaceViewController: UIViewController {
     
@@ -26,9 +25,6 @@ class SearchPlaceViewController: UIViewController {
     }
     
     let placeTableView = UITableView()
-    lazy var tableDatasource = GMSAutocompleteTableDataSource().then {
-        $0.delegate = self
-    }
     let disposeBag = DisposeBag()
     let viewModel = SearchViewModel()
     
@@ -77,50 +73,11 @@ class SearchPlaceViewController: UIViewController {
     
     private func bind() {
 
-        placeTableView.rx.setDelegate(tableDatasource)
-            .disposed(by: disposeBag)
-
-        placeTableView.rx.setDataSource(tableDatasource)
-            .disposed(by: disposeBag)
         
         searchBar.rx.cancelButtonClicked
             .bind(onNext: {
                 self.searchBar.endEditing(true)
             }).disposed(by: disposeBag)
         
-        searchBar.rx.text
-            .orEmpty
-            .map { "\($0)" }
-            .bind(onNext: {
-                print($0)
-                self.tableDatasource.sourceTextHasChanged($0)
-            }).disposed(by: disposeBag)
-        
-    }
-}
-
-extension SearchPlaceViewController: GMSAutocompleteTableDataSourceDelegate {
-    func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didAutocompleteWith place: GMSPlace) {
-        print("Place: \(place)")
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
-        searchBar.endEditing(true)
-    }
-    
-    func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didFailAutocompleteWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
-    func didUpdateAutocompletePredictions(for tableDataSource: GMSAutocompleteTableDataSource) {
-        placeTableView.reloadData()
-    }
-    
-    func didRequestAutocompletePredictions(for tableDataSource: GMSAutocompleteTableDataSource) {
-        placeTableView.reloadData()
-    }
-    
-    func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didSelect prediction: GMSAutocompletePrediction) -> Bool {
-        return true
     }
 }
