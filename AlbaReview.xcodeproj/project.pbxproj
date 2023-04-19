@@ -223,6 +223,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CA1205F229EFCE2A00B5ABB8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CA1205F629EFCE6B00B5ABB8 /* View */,
+				CA1205F529EFCE6400B5ABB8 /* ViewModel */,
+				CA1205F429EFCE5C00B5ABB8 /* Model */,
+				CA1205F329EFCE5400B5ABB8 /* ViewController */,
+				CA5FE22029D585EF00E74769 /* SearchCell.swift */,
+				CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */,
+				CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */,
+				CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CA1205F329EFCE5400B5ABB8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CA1205F429EFCE5C00B5ABB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA1205F529EFCE6400B5ABB8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA1205F629EFCE6B00B5ABB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA54381F29D9BFA10005B935 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +303,6 @@
 		CA5FE21F29D585E100E74769 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CA5FE22029D585EF00E74769 /* SearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +344,7 @@
 		CA702BAF29C4BE7600533B3A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CA1205F229EFCE2A00B5ABB8 /* Search */,
 				CA702BB129C4BEA500533B3A /* Login */,
 				CA702BB029C4BEA000533B3A /* Tab */,
 			);
@@ -371,7 +414,6 @@
 				CAE42ACF29C9C4670057599A /* AlabaExperienceVC.swift */,
 				CA6E5CEA29CC356400B28059 /* AddAlbaExperienceVC.swift */,
 				CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */,
-				CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -380,7 +422,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE42AC529C9A0560057599A /* YearModel.swift */,
-				CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,7 +431,6 @@
 			children = (
 				CAE42AC729C9A2ED0057599A /* StartViewModel.swift */,
 				CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */,
-				CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
