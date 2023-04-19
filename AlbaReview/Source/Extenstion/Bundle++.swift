@@ -9,7 +9,7 @@ import Foundation
 
 extension Bundle {
     var KAKAO_SEARCH_API_KEY: String {
-        guard let file = self.path(forResource: "KAKAO_SEARCH_API_KEY", ofType: "plist") else { return "" }
+        guard let file = self.path(forResource: "API_KEY", ofType: "plist") else { return "" }
         
         // .plist를 딕셔너리로 받아오기
         guard let resource = NSDictionary(contentsOfFile: file) else { return "" }

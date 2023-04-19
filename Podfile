@@ -19,6 +19,7 @@ target 'AlbaReview' do
   pod 'RxKakaoSDKAuth'
   pod 'RxAlamofire'
   pod 'Cosmos'
+  pod 'RxCodable'
   use_frameworks!
 
   # Pods for AlbaReview

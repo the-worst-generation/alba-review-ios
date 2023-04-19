@@ -94,7 +94,6 @@ class HomeViewController: UIViewController {
         
         searchButton.rx.tap
             .bind(onNext: {
-                print("asdf")
                 let vc = SearchPlaceViewController()
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)

@@ -97,10 +97,10 @@ class WriteReviewRatingViewController: UIViewController {
     private func bind() {
         
         //Input
-        reviewCosmosView.rx.didTouchCosmos
-            .onNext { rating in
-                self.reviewCosmosView.text = String(format: "%.1f", rating)
-            }
+//        reviewCosmosView.rx.didTouchCosmos
+//            .onNext { rating in
+//                self.reviewCosmosView.text = String(format: "%.1f", rating)
+//            }
         
         reviewTextView.rx.didBeginEditing
             .bind(onNext: { _ in

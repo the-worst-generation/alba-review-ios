@@ -73,10 +73,21 @@ class SearchPlaceViewController: UIViewController {
     
     private func bind() {
 
+        searchBar.rx.text
+            .orEmpty
+            .skip(1)
+            .filter { $0 != "" }
+            .bind(to: viewModel.searchTextSubject)
+            .disposed(by: disposeBag)
         
         searchBar.rx.cancelButtonClicked
             .bind(onNext: {
                 self.searchBar.endEditing(true)
+            }).disposed(by: disposeBag)
+        
+        viewModel.fetchPlace
+            .bind(onNext: {
+                print($0)
             }).disposed(by: disposeBag)
         
     }

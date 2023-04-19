@@ -11,6 +11,8 @@
 		C485C034B519811DB9659242 /* Pods_AlbaReview_AlbaReviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CB9BEEE0572799C8133153 /* Pods_AlbaReview_AlbaReviewUITests.framework */; };
 		CA09F7B829EE5E31008176C1 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA09F7B729EE5E31008176C1 /* API_KEY.plist */; };
 		CA09F7BA29EE5E5C008176C1 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09F7B929EE5E5C008176C1 /* Bundle++.swift */; };
+		CA09F7BC29EE63BC008176C1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09F7BB29EE63BC008176C1 /* Address.swift */; };
+		CA09F7BF29EE6FC7008176C1 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */; };
 		CA0DB39829DBEBD20091DCB2 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */; };
 		CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */; };
 		CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */; };
@@ -80,6 +82,8 @@
 		C3370DBE83EDD0ACD1583881 /* Pods-AlbaReview-AlbaReviewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; path = "Target Support Files/Pods-AlbaReview-AlbaReviewUITests/Pods-AlbaReview-AlbaReviewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA09F7B729EE5E31008176C1 /* API_KEY.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
 		CA09F7B929EE5E5C008176C1 /* Bundle++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
+		CA09F7BB29EE63BC008176C1 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		CA0DB39729DBEBD20091DCB2 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
 		CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5FE21B29D5695E00E74769 /* ServiceApi.swift */,
+				CA09F7BB29EE63BC008176C1 /* Address.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE42AC529C9A0560057599A /* YearModel.swift */,
+				CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -768,11 +774,13 @@
 				CA5FE21E29D56AD000E74769 /* SearchViewModel.swift in Sources */,
 				CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
+				CA09F7BF29EE6FC7008176C1 /* PlaceData.swift in Sources */,
 				CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */,
 				CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */,
 				CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */,
 				CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */,
 				CA6E5CEB29CC356400B28059 /* AddAlbaExperienceVC.swift in Sources */,
+				CA09F7BC29EE63BC008176C1 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

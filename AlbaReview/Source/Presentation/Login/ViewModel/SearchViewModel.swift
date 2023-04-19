@@ -12,7 +12,19 @@ import RxSwift
 
 class SearchViewModel {
     let disposeBag = DisposeBag()
-    let searchTextOb = BehaviorSubject<String>(value: "")
+    let searchTextSubject = BehaviorSubject<String>(value: "")
+    
+    var fetchPlace: Observable<Place> {
+        searchTextToParams()
+    }
 }
 
+extension SearchViewModel {
+    func searchTextToParams() -> Observable<Place> {
+        return searchTextSubject
+            .filter { $0 != ""}
+            .flatMap { API.fetchSearchPlace(text: $0) }
+            .asObservable()
+    }
+}
 
