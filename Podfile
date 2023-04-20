@@ -15,8 +15,11 @@ target 'AlbaReview' do
   pod 'TagListView'
   pod 'DropDown'
   pod 'NMapsMap'
-  pod 'GooglePlaces'
+  pod 'RxKakaoSDKCommon'
+  pod 'RxKakaoSDKAuth'
+  pod 'RxAlamofire'
   pod 'Cosmos'
+  pod 'RxCodable'
   use_frameworks!
 
   # Pods for AlbaReview

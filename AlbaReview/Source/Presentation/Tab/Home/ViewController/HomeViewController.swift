@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     let locationService = LocationManager.shared
     
     let reviewViewModel = WritableReviewViewModel.shared
+    let searchViewModel = SearchViewModel.shared
     let disposeBag = DisposeBag()
     
     
@@ -94,7 +95,6 @@ class HomeViewController: UIViewController {
         
         searchButton.rx.tap
             .bind(onNext: {
-                print("asdf")
                 let vc = SearchPlaceViewController()
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
@@ -108,6 +108,12 @@ class HomeViewController: UIViewController {
                 self.createMarker($0.lattitude, $0.longtitude)
             }).disposed(by: disposeBag)
         
+        searchViewModel.selectedPlaceSubject
+            .skip(1)
+            .bind(onNext: {
+                self.moveToSearchPlace(Double($0.x)!, y: Double($0.y)!)
+            }).disposed(by: disposeBag)
+        
     }
 }
 
@@ -116,5 +122,10 @@ extension HomeViewController {
         let marker = NMFMarker()
         marker.position = NMGLatLng(lat: lattitude, lng: longtitude)
         marker.mapView = mapView
+    }
+    
+    func moveToSearchPlace(_ x: Double, y: Double) {
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: y, lng: x))
+        mapView.moveCamera(cameraUpdate)
     }
 }

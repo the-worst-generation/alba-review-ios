@@ -193,8 +193,7 @@ class LoginAgeSexViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.isComplete
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { result in
+            .bind(onNext: { result in
                 self.updateNextButton(result)
             }).disposed(by: disposeBag)
         
@@ -211,8 +210,7 @@ class LoginAgeSexViewController: UIViewController {
     func updateYearLabel(_ vc: ChoiceYearViewController) {
        vc.viewModel.selectedIndex
             .map { vc.viewModel.years[$0] }
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { year in
+            .bind(onNext: { year in
                 self.viewModel.yearTextOb.onNext("selected")
                 self.selectLabel.text = "\(year)"
                 self.selectLabel.textColor = .black

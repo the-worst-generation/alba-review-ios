@@ -139,5 +139,8 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 *.xcuserstate
 
+### API_KEY
+AlbaReview/Resource/API_KEY.plist
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
 .DS_Store

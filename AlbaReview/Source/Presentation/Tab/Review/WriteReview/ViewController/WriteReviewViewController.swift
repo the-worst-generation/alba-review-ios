@@ -77,6 +77,7 @@ class WriteReviewViewController: UIViewController {
     private func setUpUI() {
         view.backgroundColor = .white
         setUpNavigationBar("리뷰 작성", color: .black)
+        tagListView.delegate = self
     }
     
     private func setAddView() {
@@ -118,7 +119,6 @@ class WriteReviewViewController: UIViewController {
         
         
         //Output
-        tagListView.rx.delegate.onNext(self)
         
         viewModel.isEnableNextButton
             .bind(onNext: {
