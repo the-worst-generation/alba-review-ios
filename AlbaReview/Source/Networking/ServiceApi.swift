@@ -41,7 +41,6 @@ fileprivate func networking<T: Decodable>(
         guard let encodedStr = urlQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         else { return Observable.error(NetworkError.incodingError) }
         let url = URL(string: encodedStr)!
-        
         var request = URLRequest(url: url)
         request.method = method
         request.httpBody = data
@@ -63,7 +62,6 @@ fileprivate func networking<T: Decodable>(
 
 final class API {
     static func fetchSearchPlace(text: String) -> Observable<Place> {
-        
         let params = ["query": text]
         
         return networking(
@@ -73,8 +71,6 @@ final class API {
             data: nil,
             params: params,
             model: Place.self
-        ).catchError { err in
-            return Observable.error(err)
-        }
+        )
     }
 }

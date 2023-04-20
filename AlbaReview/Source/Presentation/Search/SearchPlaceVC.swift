@@ -24,9 +24,11 @@ class SearchPlaceViewController: UIViewController {
         $0.placeholder = "장소, 주소를 검색해보세요"
     }
     
-    let placeTableView = UITableView()
+    let placeTableView = UITableView().then {
+        $0.register(SearchCell.self, forCellReuseIdentifier: SearchCell.identifier)
+    }
     let disposeBag = DisposeBag()
-    let viewModel = SearchViewModel()
+    let viewModel = SearchViewModel.shared
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -85,10 +87,27 @@ class SearchPlaceViewController: UIViewController {
                 self.searchBar.endEditing(true)
             }).disposed(by: disposeBag)
         
-        viewModel.fetchPlace
-            .bind(onNext: {
-                print($0)
-            }).disposed(by: disposeBag)
+        viewModel.placeList
+            .map { $0.documents }
+            .bind(to: viewModel.searchPlaceList)
+            .disposed(by: disposeBag)
         
+        placeTableView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+       
+        viewModel.searchPlaceList
+            .bind(to: placeTableView.rx.items(
+                cellIdentifier: SearchCell.identifier,
+                cellType: SearchCell.self)) { (row, item, cell) in
+                    cell.configure(data: item)
+                }.disposed(by: disposeBag)
+        
+        
+    }
+}
+
+extension SearchPlaceViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }

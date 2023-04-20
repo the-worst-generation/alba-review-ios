@@ -230,9 +230,6 @@
 				CA1205F529EFCE6400B5ABB8 /* ViewModel */,
 				CA1205F429EFCE5C00B5ABB8 /* Model */,
 				CA1205F329EFCE5400B5ABB8 /* ViewController */,
-				CA5FE22029D585EF00E74769 /* SearchCell.swift */,
-				CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */,
-				CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */,
 				CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */,
 			);
 			path = Search;
@@ -248,6 +245,7 @@
 		CA1205F429EFCE5C00B5ABB8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA09F7BE29EE6FC7008176C1 /* PlaceData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +253,7 @@
 		CA1205F529EFCE6400B5ABB8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FE21D29D56AD000E74769 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,6 +261,7 @@
 		CA1205F629EFCE6B00B5ABB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FE22029D585EF00E74769 /* SearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

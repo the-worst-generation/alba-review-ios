@@ -11,20 +11,27 @@ import RxCocoa
 import RxSwift
 
 class SearchViewModel {
+    
+    static let shared = SearchViewModel()
+    
     let disposeBag = DisposeBag()
     let searchTextSubject = BehaviorSubject<String>(value: "")
+    let searchPlaceList = BehaviorSubject<[Document]>(value: [])
     
-    var fetchPlace: Observable<Place> {
+    var placeList: Observable<Place> {
         searchTextToParams()
     }
+    
+    
+    private init() { }
 }
 
 extension SearchViewModel {
     func searchTextToParams() -> Observable<Place> {
         return searchTextSubject
             .filter { $0 != ""}
-            .flatMap { API.fetchSearchPlace(text: $0) }
-            .asObservable()
+            .flatMapLatest { API.fetchSearchPlace(text: $0) }
     }
 }
+
 

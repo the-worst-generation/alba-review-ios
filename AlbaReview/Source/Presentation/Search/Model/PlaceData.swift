@@ -23,13 +23,13 @@ struct Meta: Codable {
 
 struct Document: Codable {
     let placeName: String
-    let roadAddressName: String
+    let addressName: String
     let x: String
     let y: String
     
     enum CodingKeys: String, CodingKey {
         case placeName = "place_name"
-        case roadAddressName = "road_address_name"
+        case addressName = "address_name"
         case x
         case y
     }
