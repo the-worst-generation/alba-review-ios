@@ -33,7 +33,6 @@ class SearchPlaceViewController: UIViewController {
     override func viewDidLoad() {
         super .viewDidLoad()
        
-        
         setUpUI()
         setAddView()
         setConstraints()
@@ -87,6 +86,10 @@ class SearchPlaceViewController: UIViewController {
                 self.searchBar.endEditing(true)
             }).disposed(by: disposeBag)
         
+        placeTableView.rx.modelSelected(Document.self)
+            .bind(to: viewModel.selectedPlaceSubject)
+            .disposed(by: disposeBag)
+        
         viewModel.placeList
             .map { $0.documents }
             .bind(to: viewModel.searchPlaceList)
@@ -102,7 +105,11 @@ class SearchPlaceViewController: UIViewController {
                     cell.configure(data: item)
                 }.disposed(by: disposeBag)
         
-        
+        viewModel.selectedPlaceSubject
+            .bind(onNext: { _ in
+                self.viewModel.searchTextSubject.onNext("!")
+                self.dismiss(animated: true)
+            }).disposed(by: disposeBag)
     }
 }
 

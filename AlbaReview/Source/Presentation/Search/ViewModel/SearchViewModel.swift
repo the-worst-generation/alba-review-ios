@@ -17,6 +17,7 @@ class SearchViewModel {
     let disposeBag = DisposeBag()
     let searchTextSubject = BehaviorSubject<String>(value: "")
     let searchPlaceList = BehaviorSubject<[Document]>(value: [])
+    let selectedPlaceSubject = BehaviorSubject<Document>(value: Document(placeName: "", addressName: "", x: "0", y: "0"))
     
     var placeList: Observable<Place> {
         searchTextToParams()
