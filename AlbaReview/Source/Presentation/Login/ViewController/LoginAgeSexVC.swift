@@ -219,7 +219,7 @@ class LoginAgeSexViewController: UIViewController {
     
     func updateNextButton(_ result: Bool) {
         if result {
-            nextButton.backgroundColor = .systemMint
+            nextButton.backgroundColor = .systemCyan
             nextButton.isEnabled = result
         }
         else {

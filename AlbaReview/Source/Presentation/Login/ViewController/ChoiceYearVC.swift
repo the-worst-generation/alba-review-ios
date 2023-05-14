@@ -28,7 +28,7 @@ class ChoiceYearViewController: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 16)
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemMint
+        $0.backgroundColor = .systemCyan
     }
     
     let disposeBag = DisposeBag()
