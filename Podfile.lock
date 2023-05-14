@@ -1,8 +1,22 @@
 PODS:
   - Alamofire (5.6.4)
+  - AppAuth (1.6.1):
+    - AppAuth/Core (= 1.6.1)
+    - AppAuth/ExternalUserAgent (= 1.6.1)
+  - AppAuth/Core (1.6.1)
+  - AppAuth/ExternalUserAgent (1.6.1):
+    - AppAuth/Core
   - Cosmos (23.0.0)
   - Differentiator (4.0.1)
   - DropDown (2.3.13)
+  - GoogleSignIn (7.0.0):
+    - AppAuth (~> 1.5)
+    - GTMAppAuth (< 3.0, >= 1.3)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.1)
+  - GTMAppAuth (2.0.0):
+    - AppAuth/Core (~> 1.6)
+    - GTMSessionFetcher/Core (< 4.0, >= 1.5)
+  - GTMSessionFetcher/Core (3.1.0)
   - KakaoSDKAuth (2.8.1):
     - KakaoSDKCommon (= 2.8.1)
   - KakaoSDKCommon (2.8.1):
@@ -64,6 +78,7 @@ DEPENDENCIES:
   - Alamofire
   - Cosmos
   - DropDown
+  - GoogleSignIn
   - Kingfisher
   - NMapsMap
   - ReactorKit
@@ -82,9 +97,13 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppAuth
     - Cosmos
     - Differentiator
     - DropDown
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - KakaoSDKAuth
     - KakaoSDKCommon
     - Kingfisher
@@ -107,9 +126,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  AppAuth: e48b432bb4ba88b10cb2bcc50d7f3af21e78b9c2
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
+  GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
+  GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
   KakaoSDKAuth: 3cf74660531ac85cd2c7931df8d90d562b0a8fe2
   KakaoSDKCommon: 701ef2a9b92215a4bf131b2a6139c3586b5e8d99
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
@@ -130,6 +153,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 1b490d3b2ef3127aa3b6b41427433dab18e97473
+PODFILE CHECKSUM: 525f9c14440bcd311a09f51aa55778aad5684141
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

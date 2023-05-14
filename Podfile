@@ -20,6 +20,7 @@ target 'AlbaReview' do
   pod 'RxAlamofire'
   pod 'Cosmos'
   pod 'RxCodable'
+  pod 'GoogleSignIn'
   use_frameworks!
 
   # Pods for AlbaReview

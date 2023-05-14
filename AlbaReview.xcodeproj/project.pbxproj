@@ -17,6 +17,7 @@
 		CA0DB39A29DBF9C00091DCB2 /* WriteReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */; };
 		CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */; };
 		CA0DB39E29DC24E70091DCB2 /* WriteReviewRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DB39D29DC24E60091DCB2 /* WriteReviewRatingViewModel.swift */; };
+		CA161D332A10D41B005E169F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA161D322A10D41B005E169F /* LoginViewModel.swift */; };
 		CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */; };
 		CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382129D9BFD20005B935 /* WritableViewController.swift */; };
 		CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */; };
@@ -88,6 +89,7 @@
 		CA0DB39929DBF9C00091DCB2 /* WriteReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewModel.swift; sourceTree = "<group>"; };
 		CA0DB39B29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewController.swift; sourceTree = "<group>"; };
 		CA0DB39D29DC24E60091DCB2 /* WriteReviewRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewRatingViewModel.swift; sourceTree = "<group>"; };
+		CA161D322A10D41B005E169F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CA1EC4BC29CC93F90074B5F0 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
 		CA54382129D9BFD20005B935 /* WritableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableViewController.swift; sourceTree = "<group>"; };
 		CA54382429D9C0FC0005B935 /* WritableReivewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableReivewModel.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			children = (
 				CAE42AC729C9A2ED0057599A /* StartViewModel.swift */,
 				CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */,
+				CA161D322A10D41B005E169F /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				CA5FE21E29D56AD000E74769 /* SearchViewModel.swift in Sources */,
 				CA54382229D9BFD20005B935 /* WritableViewController.swift in Sources */,
 				CAF3E0E329C4AE150059EA85 /* SceneDelegate.swift in Sources */,
+				CA161D332A10D41B005E169F /* LoginViewModel.swift in Sources */,
 				CA09F7BF29EE6FC7008176C1 /* PlaceData.swift in Sources */,
 				CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */,
 				CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */,
@@ -1001,6 +1005,9 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlbaReview/Resource/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
@@ -1044,6 +1051,9 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlbaReview/Resource/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
