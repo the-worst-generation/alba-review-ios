@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     let locationService = LocationManager.shared
+    let loginViewModel = LoginViewModel()
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -151,8 +152,9 @@ class LoginViewController: UIViewController {
     private func bind() {
         googleLoginButton.rx.tap
             .bind(onNext: {
-                let vc = LoginNickNameViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
+                self.loginViewModel.googleLogin(vc: self)
+//                let vc = LoginNickNameViewController()
+//                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         
         noLoginButton.rx.tap
