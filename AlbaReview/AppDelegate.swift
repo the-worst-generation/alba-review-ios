@@ -7,12 +7,17 @@
 
 import UIKit
 import GoogleSignIn
+import RxKakaoSDKAuth
+import KakaoSDKAuth
+import RxKakaoSDKCommon
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        RxKakaoSDKCommon.initSDK(appKey: Bundle.main.KAKAO_NATIVE_APP_KEY)
         return true
     }
 
@@ -27,12 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        //Google Login
         var handled: Bool
-
           handled = GIDSignIn.sharedInstance.handle(url)
           if handled {
             return true
           }
+        
+        //Kakao Login
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.rx.handleOpenUrl(url: url)
+        }
         
         return false
     }

@@ -157,12 +157,25 @@ class LoginViewController: UIViewController {
 //                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         
+        kakaoLoginButton.rx.tap
+            .bind(onNext: {
+                self.loginViewModel.kakaoLogin()
+            }).disposed(by: disposeBag)
+        
         noLoginButton.rx.tap
             .bind(onNext: {
                 let tabBar = AppTabBarController()
                 tabBar.modalPresentationStyle = .fullScreen
                 
                 self.present(tabBar, animated: true)
+            }).disposed(by: disposeBag)
+        
+        
+        loginViewModel.kakaoLoginSubject
+            .filter { $0 != nil }
+            .compactMap { $0 }
+            .bind(onNext: {
+                print("as:\($0.accessToken)")
             }).disposed(by: disposeBag)
     }
     
