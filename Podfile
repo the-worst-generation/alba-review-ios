@@ -21,6 +21,7 @@ target 'AlbaReview' do
   pod 'Cosmos'
   pod 'RxCodable'
   pod 'GoogleSignIn'
+  pod 'RxKakaoSDK'
   use_frameworks!
 
   # Pods for AlbaReview
