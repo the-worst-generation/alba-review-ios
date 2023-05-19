@@ -13,6 +13,7 @@ import Then
 import RxSwift
 import RxCocoa
 import CoreLocation
+import NaverThirdPartyLogin
 
 class LoginViewController: UIViewController {
 
@@ -36,6 +37,8 @@ class LoginViewController: UIViewController {
         $0.setTitle("로그인없이 사용하기", for: .normal)
     }
     
+    let naverLoginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+    
     let disposeBag = DisposeBag()
     let locationService = LocationManager.shared
     let loginViewModel = LoginViewModel()
@@ -52,6 +55,8 @@ class LoginViewController: UIViewController {
         
         locationService.locationManager.delegate = self
         locationService.locationManager.requestWhenInUseAuthorization()
+        
+        naverLoginInstance?.delegate = self
     }
     
     //MARK: - SetUp
@@ -153,13 +158,19 @@ class LoginViewController: UIViewController {
         googleLoginButton.rx.tap
             .bind(onNext: {
                 self.loginViewModel.googleLogin(vc: self)
-//                let vc = LoginNickNameViewController()
-//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = LoginNickNameViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
         
         kakaoLoginButton.rx.tap
             .bind(onNext: {
                 self.loginViewModel.kakaoLogin()
+            }).disposed(by: disposeBag)
+        
+        
+        naverLoginButton.rx.tap
+            .bind(onNext: {
+                self.naverLoginInstance?.requestThirdPartyLogin()
             }).disposed(by: disposeBag)
         
         noLoginButton.rx.tap
@@ -169,7 +180,6 @@ class LoginViewController: UIViewController {
                 
                 self.present(tabBar, animated: true)
             }).disposed(by: disposeBag)
-        
         
         loginViewModel.kakaoLoginSubject
             .filter { $0 != nil }
@@ -181,7 +191,24 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: CLLocationManagerDelegate {
+extension LoginViewController: CLLocationManagerDelegate, NaverThirdPartyLoginConnectionDelegate {
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        print("네이버 로그인 성공")
+        print("네이버 토큰\(naverLoginInstance?.accessToken)")
+    }
+    
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        print("네이버 토큰\(naverLoginInstance?.accessToken)")
+    }
+    
+    func oauth20ConnectionDidFinishDeleteToken() {
+        print("네이버 로그아웃")
+    }
+    
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print(error.localizedDescription)
+    }
+    
     func getLocationUsagePermission() {
         locationService.locationManager.requestWhenInUseAuthorization()
     }
