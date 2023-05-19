@@ -14,6 +14,7 @@ import RxSwift
 import RxCocoa
 import CoreLocation
 import NaverThirdPartyLogin
+import AuthenticationServices
 
 class LoginViewController: UIViewController {
 
@@ -167,6 +168,10 @@ class LoginViewController: UIViewController {
                 self.loginViewModel.kakaoLogin()
             }).disposed(by: disposeBag)
         
+        appleLoginButton.rx.tap
+            .bind(onNext: {
+                self.appleLogin()
+            }).disposed(by: disposeBag)
         
         naverLoginButton.rx.tap
             .bind(onNext: {
@@ -191,7 +196,7 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: CLLocationManagerDelegate, NaverThirdPartyLoginConnectionDelegate {
+extension LoginViewController: CLLocationManagerDelegate, NaverThirdPartyLoginConnectionDelegate, ASAuthorizationControllerDelegate {
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
         print("네이버 로그인 성공")
         print("네이버 토큰\(naverLoginInstance?.accessToken)")
@@ -229,5 +234,26 @@ extension LoginViewController: CLLocationManagerDelegate, NaverThirdPartyLoginCo
             locationService.locationManager.stopUpdatingLocation()
             print("GPS Default")
         }
+    }
+    
+    func appleLogin() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
+        print(credential.identityToken)
+    }
+    
+    
+    // 실패 후 동작
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
