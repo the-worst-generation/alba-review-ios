@@ -22,6 +22,7 @@ target 'AlbaReview' do
   pod 'RxCodable'
   pod 'GoogleSignIn'
   pod 'RxKakaoSDK'
+  pod 'naveridlogin-sdk-ios'
   use_frameworks!
 
   # Pods for AlbaReview

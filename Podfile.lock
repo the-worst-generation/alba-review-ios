@@ -41,6 +41,7 @@ PODS:
   - KakaoSDKUser (2.8.1):
     - KakaoSDKAuth (= 2.8.1)
   - Kingfisher (7.6.2)
+  - naveridlogin-sdk-ios (4.1.6)
   - NMapsGeometry (1.0.1)
   - NMapsMap (3.16.2):
     - NMapsGeometry
@@ -116,6 +117,7 @@ DEPENDENCIES:
   - DropDown
   - GoogleSignIn
   - Kingfisher
+  - naveridlogin-sdk-ios
   - NMapsMap
   - ReactorKit
   - RxAlamofire
@@ -150,6 +152,7 @@ SPEC REPOS:
     - KakaoSDKTemplate
     - KakaoSDKUser
     - Kingfisher
+    - naveridlogin-sdk-ios
     - NMapsGeometry
     - NMapsMap
     - ReactorKit
@@ -190,6 +193,7 @@ SPEC CHECKSUMS:
   KakaoSDKTemplate: 1e47d4d711cdae4250e8750cf6ce76652736e73e
   KakaoSDKUser: c4bdbca17b05ce7a25c67176ac68b6b0c8b1db56
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  naveridlogin-sdk-ios: cdd34e3585a3d5aaf37c1d84c1f41faba4a25d1a
   NMapsGeometry: 53c573ead66466681cf123f99f698dc8071a4b83
   NMapsMap: aaa64717249b06ae82c3a3addb3a01f0e33100ab
   ReactorKit: 6d894a20c3d508344320901cd8e386fde92df4b6
@@ -212,6 +216,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: a817f1757fcd7eec1e108401cb63be508608508d
+PODFILE CHECKSUM: ae8b8e16a5c4df084a5cd532af370eda7c321088
 
 COCOAPODS: 1.12.1
