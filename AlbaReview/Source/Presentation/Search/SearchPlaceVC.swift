@@ -101,6 +101,11 @@ class SearchPlaceViewController: UIViewController {
             }).disposed(by: disposeBag)
         
         
+        searchBar.rx.cancelButtonClicked
+            .bind(onNext: {
+                self.searchBar.endEditing(true)
+            }).disposed(by: disposeBag)
+        
         placeTableView.rx.modelSelected(Document.self)
             .bind(to: viewModel.selectedPlaceSubject)
             .disposed(by: disposeBag)

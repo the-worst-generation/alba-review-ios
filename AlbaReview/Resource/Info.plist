@@ -40,6 +40,11 @@
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NMFClientId</key>
 	<string>6to3fl563y</string>
 	<key>NSAppTransportSecurity</key>
