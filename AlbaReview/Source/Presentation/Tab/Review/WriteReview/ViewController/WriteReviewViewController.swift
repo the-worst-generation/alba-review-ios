@@ -119,7 +119,6 @@ class WriteReviewViewController: UIViewController {
         
         
         //Output
-        
         viewModel.isEnableNextButton
             .bind(onNext: {
                 self.setNextButtonEnable($0)
