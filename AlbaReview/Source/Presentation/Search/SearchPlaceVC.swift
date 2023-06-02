@@ -24,6 +24,11 @@ class SearchPlaceViewController: UIViewController {
         $0.placeholder = "장소, 주소를 검색해보세요"
     }
     
+    let xButton = UIButton().then {
+        $0.tintColor = .black
+        $0.setImage(UIImage(systemName: "xmark"), for: .normal)
+    }
+    
     let placeTableView = UITableView().then {
         $0.register(SearchCell.self, forCellReuseIdentifier: SearchCell.identifier)
     }
@@ -41,6 +46,7 @@ class SearchPlaceViewController: UIViewController {
     
     //MARK: - SetUp
     private func setUpUI() {
+        self.searchBar.showsCancelButton = false
         view.backgroundColor = .white
         setUpNavigationBar("", color: .white)
 
@@ -49,6 +55,7 @@ class SearchPlaceViewController: UIViewController {
     
         [
             searchBar,
+            xButton,
             placeTableView
         ]   .forEach { view.addSubview($0) }
         
@@ -58,7 +65,14 @@ class SearchPlaceViewController: UIViewController {
         
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.leading.equalToSuperview().inset(10)
+        }
+        
+        xButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(18)
+            make.leading.equalTo(searchBar.snp.trailing).offset(5)
+            make.trailing.equalToSuperview().inset(10)
+            make.width.height.equalTo(20)
         }
         
         placeTableView.snp.makeConstraints { make in
@@ -80,6 +94,12 @@ class SearchPlaceViewController: UIViewController {
             .filter { $0 != "" }
             .bind(to: viewModel.searchTextSubject)
             .disposed(by: disposeBag)
+        
+        xButton.rx.tap
+            .bind(onNext: {
+                self.dismiss(animated: true)
+            }).disposed(by: disposeBag)
+        
         
         searchBar.rx.cancelButtonClicked
             .bind(onNext: {

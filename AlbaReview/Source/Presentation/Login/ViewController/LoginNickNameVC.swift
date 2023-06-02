@@ -54,7 +54,7 @@ class LoginNickNameViewController: UIViewController {
     let nextButton = UIButton().then {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .systemMint
+        $0.backgroundColor = .systemCyan
         $0.setTitle("다음", for: .normal)
     }
     
@@ -73,6 +73,10 @@ class LoginNickNameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
         setUpNavigationBar("1/3", color: .white)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     //MARK: - SetUp
