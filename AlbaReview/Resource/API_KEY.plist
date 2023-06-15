@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>KAKAO_NATIVE_APP_KEY</key>
-	<string>4e5e928dd126ab755209ff36023838b6</string>
+	<string>nilasdfadsf</string>
 	<key>KAKAO_SEARCH_API_KEY</key>
-	<string>KakaoAK 734d4abe48b319cccdf4788804c6e7c4</string>
+	<string>nil</string>
 	<key>GOOGLE_CLIENT_ID</key>
-	<string>944681471374-1il0tg7psr9ai539gc7tfjaqc7cpnaer.apps.googleusercontent.com</string>
-	<key>KAKAO_SEARCH_API_KEY</key>
 	<string>nil</string>
 </dict>
 </plist>
