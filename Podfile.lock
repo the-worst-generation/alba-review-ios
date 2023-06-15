@@ -151,8 +151,6 @@ SPEC REPOS:
     - KakaoSDKTalk
     - KakaoSDKTemplate
     - KakaoSDKUser
-    - KakaoSDKAuth
-    - KakaoSDKCommon
     - Kingfisher
     - naveridlogin-sdk-ios
     - NMapsGeometry
@@ -170,8 +168,6 @@ SPEC REPOS:
     - RxKakaoSDKStory
     - RxKakaoSDKTalk
     - RxKakaoSDKUser
-    - RxKakaoSDKAuth
-    - RxKakaoSDKCommon
     - RxRelay
     - RxSwift
     - SnapKit
