@@ -7,17 +7,44 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+import Then
+import SnapKit
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class MyPageCell: UITableViewCell {
+
+    static let identifier = "MypageCell"
+    
+    let titleLabel = UILabel().then {
+        $0.configureLabel(text: "", fontSize: 16, color: .black)
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setUpUI()
+        setAddView()
+        setConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - SetUp
+    private func setUpUI() {
+        
+    }
+    
+    private func setAddView() {
+        addSubview(titleLabel)
+    }
+    
+    private func setConstraints() {
+        titleLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(16)
+            make.top.bottom.trailing.equalToSuperview()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
