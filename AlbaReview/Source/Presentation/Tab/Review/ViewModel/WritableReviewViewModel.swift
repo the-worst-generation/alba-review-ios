@@ -43,8 +43,6 @@ extension WritableReviewViewModel {
     func setWritedReview() -> Observable<WritableReviewData?> {
         return .combineLatest(selectedModelSubject,
                               didTapWriteReviewEnd) { item, isTapEnd in
-            print(isTapEnd)
-            print (item)
             if isTapEnd {
                 return item
             } else { return nil }
