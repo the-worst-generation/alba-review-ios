@@ -69,6 +69,10 @@ class AddAlbaExperienceViewController: UIViewController {
         $0.setTitle("추가하기", for: .normal)
     }
     
+    let periodDropDown = DropDown()
+    
+    let searchViewModel = SearchViewModel.shared
+    let albaExperienceViewModel = AlbaExperienceViewModel()
     let disposeBag = DisposeBag()
     
     
@@ -87,8 +91,8 @@ class AddAlbaExperienceViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super .viewDidLayoutSubviews()
-
-
+        
+        setUpDropDown()
     }
     
     
@@ -96,6 +100,7 @@ class AddAlbaExperienceViewController: UIViewController {
     private func setUpUI() {
         view.backgroundColor = .white
         setUpNavigationBar("", color: .white)
+        
     }
     private func setAddView() {
     
@@ -167,11 +172,58 @@ class AddAlbaExperienceViewController: UIViewController {
     }
     
     private func bind() {
-        
+        //Input
         placeSearchButton.rx.tap
             .bind(onNext: {
                 self.present(SearchPlaceViewController(),
                              animated: true)
             }).disposed(by: disposeBag)
+        
+        periodButton.rx.tap
+            .bind(onNext: { _ in
+                self.periodDropDown.show()
+            }).disposed(by: disposeBag)
+        
+        addButton.rx.tap
+            .bind(onNext: {
+                self.albaExperienceViewModel.isPalceSelected.onNext(false)
+                self.albaExperienceViewModel.isPeriodSelected.onNext(false)
+                self.navigationController?.popViewController(animated: true)
+            }).disposed(by: disposeBag)
+        
+        //Output
+        searchViewModel.selectedPlaceSubject
+            .skip(1)
+            .map { $0.placeName }
+            .bind(onNext: {
+                self.albaPlaceLabel.text = $0
+                self.albaExperienceViewModel.isPalceSelected.onNext(true)
+            })
+            .disposed(by: disposeBag)
+        
+        
+        albaExperienceViewModel.albaPeriodSubject
+            .bind(onNext: {
+                self.periodDropDown.dataSource = $0
+            }).disposed(by: disposeBag)
+        
+        albaExperienceViewModel.isAbleToAdd
+            .filter { $0 }
+            .bind(onNext: {
+                self.addButton.isEnabled = $0
+                self.addButton.backgroundColor = .systemCyan
+            }).disposed(by: disposeBag)
+        
+    }
+    
+    func setUpDropDown() {
+        periodDropDown.anchorView = periodDropView
+        periodDropDown.bottomOffset = CGPoint(x: 0,
+                                              y: periodDropView.bounds.height)
+        
+        periodDropDown.selectionAction = { _, item in
+            self.periodLabel.text = item
+            self.albaExperienceViewModel.isPeriodSelected.onNext(true)
+        }
     }
 }

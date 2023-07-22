@@ -36,6 +36,7 @@
 		CABC968829CED47C004CA2CE /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968729CED47C004CA2CE /* AppTabBarController.swift */; };
 		CABC968C29CED9FF004CA2CE /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968B29CED9FF004CA2CE /* MyPageViewController.swift */; };
 		CABC968F29CEEA61004CA2CE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABC968E29CEEA61004CA2CE /* LocationManager.swift */; };
+		CAD1EC082A6BC600003B21FD /* AlbaExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1EC072A6BC600003B21FD /* AlbaExperienceViewModel.swift */; };
 		CAE42ABE29C99D9E0057599A /* LoginAgeSexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */; };
 		CAE42AC029C9A0210057599A /* ChoiceYearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */; };
 		CAE42AC429C9A0380057599A /* ChoiceYearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */; };
@@ -117,6 +118,7 @@
 		CABC968729CED47C004CA2CE /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		CABC968B29CED9FF004CA2CE /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		CABC968E29CEEA61004CA2CE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CAD1EC072A6BC600003B21FD /* AlbaExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbaExperienceViewModel.swift; sourceTree = "<group>"; };
 		CAE42ABD29C99D9E0057599A /* LoginAgeSexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAgeSexVC.swift; sourceTree = "<group>"; };
 		CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearViewModel.swift; sourceTree = "<group>"; };
 		CAE42AC329C9A0380057599A /* ChoiceYearVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceYearVC.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				CAE42AC729C9A2ED0057599A /* StartViewModel.swift */,
 				CAE42ABF29C9A0210057599A /* ChoiceYearViewModel.swift */,
 				CA161D322A10D41B005E169F /* LoginViewModel.swift */,
+				CAD1EC072A6BC600003B21FD /* AlbaExperienceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -826,6 +829,7 @@
 				CAE42AC829C9A2ED0057599A /* StartViewModel.swift in Sources */,
 				CA5FE21C29D5695E00E74769 /* ServiceApi.swift in Sources */,
 				CAB1C56429C97CAD00B5798E /* UILabel++.swift in Sources */,
+				CAD1EC082A6BC600003B21FD /* AlbaExperienceViewModel.swift in Sources */,
 				CA54382529D9C0FC0005B935 /* WritableReivewModel.swift in Sources */,
 				CA1EC4BD29CC93F90074B5F0 /* SearchPlaceVC.swift in Sources */,
 				CA0DB39C29DC0BC30091DCB2 /* WriteReviewRatingViewController.swift in Sources */,
